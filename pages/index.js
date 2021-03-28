@@ -36,17 +36,28 @@ export default function Home() {
 
       <p>Hello, world! I'm a web developer and content creator from California 🌴</p>
 
-      <LinkButtonColumn labels={labels}/>
+      <LinkButtonColumn labels={labels} links={links}/>
     </div>
   )
 }
 
 function LinkButtonColumn(props) {
+  const pairs = zip(props.labels, props.links)
+
   return (
     <span>
-      {props.labels.map(element => <LinkButton label={element}/>)}
+      {pairs.map(element => <LinkButton label={element[0]} link={element[1]}/>)}
     </span>
   )
+}
+
+function zip(a, b) {
+
+  const mapFunction = (element, index) => {
+    return [element, b[index]];
+  }
+
+  return a.map(mapFunction);
 }
 
 function LinkButton(props) {
