@@ -63,7 +63,7 @@ function zip(a, b) {
 function LinkButton(props) {
   return (
     <span>
-      {props.label}
+      <a href={props.link}>{props.label}</a>
       <br/>
     </span>
   )
