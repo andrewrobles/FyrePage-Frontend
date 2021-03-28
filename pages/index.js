@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Image from 'next/image'
 
 export default function Home() {
   const labels = [
@@ -24,6 +25,12 @@ export default function Home() {
         <title>Andrew Robles</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Image
+        src='/profile.png'
+        height={100}
+        width={100}
+      />
 
       <p>Andrew Robles</p>
 
