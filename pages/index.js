@@ -38,6 +38,7 @@ export default function Home() {
 
       <p>Hello, world! I'm a web developer and content creator from California 🌴</p>
 
+
       <LinkButtonColumn labels={labels} links={links}/>
     </div>
   )
@@ -47,7 +48,7 @@ function LinkButtonColumn(props) {
   const pairs = zip(props.labels, props.links)
 
   return (
-    <div>
+    <div className={`${ styles.linkButtonColumn }`}>
       {pairs.map(element => <LinkButton label={element[0]} link={element[1]}/>)}
     </div>
   )
