@@ -10,6 +10,17 @@
   background-color: #F2EFE4;
 }
 
+.name {
+  font-size: 22px; 
+  color: #553320;
+}
+
+.description {
+ text-align: center; 
+ font-size: 16px;
+ color: #553320 !important;
+}
+
 .linkButton {
   width: 95vw;
   background-color: white !important;

@@ -34,9 +34,9 @@ export default function Home() {
         width={100}
       />
 
-      <p>Andrew Robles</p>
+      <p className={styles.name}>Andrew Robles</p>
 
-      <p>Hello, world! I'm a web developer and content creator from California 🌴</p>
+      <p className={styles.description}>Hello, world! I'm a web developer and content creator from California 🌴</p>
 
 
       <LinkButtonColumn labels={labels} links={links}/>
