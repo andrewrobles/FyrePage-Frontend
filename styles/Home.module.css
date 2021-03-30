@@ -8,5 +8,12 @@
   background-color: #F2EFE4;
 }
 
+.linkButton {
+}
+
+.image {
+  border-radius: 45px;
+}
+
 @media (max-width: 600px) {
 }

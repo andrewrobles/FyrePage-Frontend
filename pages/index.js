@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function Home() {
   const labels = [
@@ -27,6 +28,7 @@ export default function Home() {
       </Head>
 
       <Image
+        className={styles.image} 
         src='/profile.png'
         height={100}
         width={100}
@@ -45,9 +47,9 @@ function LinkButtonColumn(props) {
   const pairs = zip(props.labels, props.links)
 
   return (
-    <span>
+    <div>
       {pairs.map(element => <LinkButton label={element[0]} link={element[1]}/>)}
-    </span>
+    </div>
   )
 }
 
@@ -62,9 +64,9 @@ function zip(a, b) {
 
 function LinkButton(props) {
   return (
-    <span>
-      <a href={props.link}>{props.label}</a>
+    <div>
+      <a className={`btn btn-primary mb-2 ${ styles.linkButton }`} href={props.link}>{props.label}</a>
       <br/>
-    </span>
+    </div>
   )
 }
