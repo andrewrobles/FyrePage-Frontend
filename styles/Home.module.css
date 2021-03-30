@@ -11,23 +11,27 @@
 }
 
 .name {
-  font-size: 22px; 
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 23px;
   color: #553320;
+  padding-bottom: 8px;
+  padding-top: 10px;
 }
 
 .description {
- text-align: center; 
- font-size: 16px;
- color: #553320 !important;
+  font-family: 'Ubuntu', sans-serif;
+  padding-bottom: 18px;
+  text-align: center;
+  font-size: 17px;
+  color: #553320;
 }
 
 .linkButton {
   width: 95vw;
   background-color: white !important;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 16px;
-  border-color: black; 
-  color:black;
+  font-family: 'Ubuntu', sans-serif !important;
+  border-color: black !important; 
+  color:black !important;
 }
 
 .image {

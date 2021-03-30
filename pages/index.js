@@ -30,13 +30,13 @@ export default function Home() {
       <Image
         className={styles.image} 
         src='/profile.png'
-        height={100}
-        width={100}
+        height={105}
+        width={105}
       />
 
-      <p className={styles.name}>Andrew Robles</p>
+      <div className={styles.name}>Andrew Robles</div>
 
-      <p className={styles.description}>Hello, world! I'm a web developer and content creator from California 🌴</p>
+      <div className={styles.description}>Hello, world! I'm a web developer and <br/> content creator from California 🌴</div>
 
 
       <LinkButtonColumn labels={labels} links={links}/>
