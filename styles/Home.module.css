@@ -27,7 +27,7 @@
 }
 
 .linkButton {
-  width: 95vw;
+  width: 375px;
   background-color: white !important;
   font-family: 'Ubuntu', sans-serif !important;
   border-color: black !important; 
@@ -39,4 +39,7 @@
 }
 
 @media (max-width: 600px) {
+  .linkButton {
+    width: 95vw;
+  }
 }
