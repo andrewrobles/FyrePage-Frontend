@@ -66,7 +66,7 @@ function zip(a, b) {
 function LinkButton(props) {
   return (
     <div>
-      <a className={`btn btn-primary mb-2 ${ styles.linkButton }`} href={props.link}>{props.label}</a>
+      <a className={`btn btn-primary mb-2 btn-lg ${ styles.linkButton }`} href={props.link}>{props.label}</a>
       <br/>
     </div>
   )
