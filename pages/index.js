@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function Home() {
   const labels = [
-    'Live Podcast @ 7pm PST', 
     'TikTok', 
     'Instagram', 
     'YouTube', 
@@ -14,7 +13,6 @@ export default function Home() {
   ]
 
   const links = [
-    'https://dogehouse.tv/scheduled-room/8de54d48-05e1-48f5-9975-fd0c6cdb03ad',
     'https://www.tiktok.com/@andrew.robles',
     'https://www.instagram.com/andrewroblesdev/',
     'https://www.youtube.com/channel/UCqNGTj5w7NxE74m25So27gg',
@@ -37,9 +35,6 @@ export default function Home() {
       />
 
       <div className={styles.name}>Andrew Robles</div>
-
-      <div className={styles.description}>Hello, world! I'm a web developer and <br/> content creator from California 🌴</div>
-
 
       <LinkButtonColumn labels={labels} links={links}/>
     </div>

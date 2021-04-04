@@ -7,13 +7,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #F2EFE4;
+  background-color: white;
 }
 
 .name {
   font-family: 'Ubuntu', sans-serif;
   font-size: 23px;
-  color: #553320;
+  color: black;
   padding-bottom: 8px;
   padding-top: 10px;
 }
