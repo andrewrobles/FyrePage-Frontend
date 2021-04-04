@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 .container {
   min-height: 100vh;
@@ -14,7 +15,7 @@
   font-family: 'Ubuntu', sans-serif;
   font-size: 23px;
   color: black;
-  padding-bottom: 8px;
+  padding-bottom: 13px;
   padding-top: 10px;
 }
 
@@ -28,10 +29,11 @@
 
 .linkButton {
   width: 375px;
-  background-color: white !important;
+  background-color: #161616 !important;
+  font-weight: 300 !important;
   font-family: 'Ubuntu', sans-serif !important;
   border-color: black !important; 
-  color:black !important;
+  color:white !important;
 }
 
 .image {
