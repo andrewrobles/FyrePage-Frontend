@@ -3,43 +3,25 @@ import styles from './profile.module.css'
 import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-export default function Profile() {
-  const data = {
-    'name': 'Andrew Robles',
-    'image': '/profile.png',
-    'links': [
-      'https://www.tiktok.com/@andrew.robles',
-      'https://www.instagram.com/andrewroblesdev/',
-      'https://www.youtube.com/channel/UCqNGTj5w7NxE74m25So27gg',
-      'https://www.linkedin.com/in/andrew-robles-dev/',
-      'https://github.com/andrewrobles'
-    ],
-    'labels': [
-      'TikTok',
-      'Instagram',
-      'YouTube',
-      'LinkedIn',
-      'Github'
-    ]
-  }
+export default function Profile(props) {
 
   return (
     <div className={styles.container}>
       <Head>
-        <title>{data.name}</title>
-        <link rel="icon" href={data.image} />
+        <title>{props.data.name}</title>
+        <link rel="icon" href={props.data.image} />
       </Head>
 
       <Image
         className={styles.image} 
-        src={data.image}
+        src={props.data.image}
         height={105}
         width={105}
       />
 
-      <div className={styles.name}>{data.name}</div>
+      <div className={styles.name}>{props.data.name}</div>
 
-      <LinkButtonColumn labels={data.labels} links={data.links}/>
+      <LinkButtonColumn labels={props.data.labels} links={props.data.links}/>
     </div>
   )
 }
