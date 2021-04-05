@@ -28,8 +28,11 @@ const User = () => {
     const router = useRouter()
     const { user } = router.query
 
-    return <Profile data={userData['andrewrobles']}/>
-
+    if (user in userData) {
+        return <Profile data={userData[user]}/>
+    } else {
+        return <p>User not found</p>
+    }
 }
 
 
