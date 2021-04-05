@@ -1,10 +1,7 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Image from 'next/image'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import { useRouter } from 'next/router'
 import Profile from '../components/profile/profile'
 
-export default function Home() {
+const User = () => {
     const andrewrobles = {
         'name': 'Andrew Robles',
         'image': '/andrewrobles.png',
@@ -24,11 +21,33 @@ export default function Home() {
         ]
     }
     
-    const userData = {
-        'andrewrobles': andrewrobles,
+    const erinsantamaria = {
+        'name': 'Erin Santamaria',
+        'image': '/erinsantamaria.jpeg',
+        'links': [
+            'https://www.tiktok.com/@recruiter_rin',
+            'https://www.linkedin.com/in/erin-santamaria-4604a274/',
+        ],
+        'labels': [
+            'TikTok',
+            'LinkedIn',
+        ]
     }
 
-  return (
-    <Profile data={userData.andrewrobles}/>
-  )
+    const userData = {
+        'andrewrobles': andrewrobles,
+        'erinsantamaria': erinsantamaria
+    }
+
+    const router = useRouter()
+    const { user } = router.query
+
+    if (user in userData) {
+        return <Profile data={userData[user]}/>
+    } else {
+        return <p>User not found</p>
+    }
 }
+
+
+export default User 
