@@ -14,7 +14,7 @@
 .name {
   font-family: 'Ubuntu', sans-serif;
   font-size: 23px;
-  color: black;
+  color: #161616;
   padding-bottom: 13px;
   padding-top: 10px;
 }
@@ -32,7 +32,7 @@
   background-color: #161616 !important;
   font-weight: 300 !important;
   font-family: 'Ubuntu', sans-serif !important;
-  border-color: black !important; 
+  border-color: #161616 !important; 
   color:white !important;
 }
 
