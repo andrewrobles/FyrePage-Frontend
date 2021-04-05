@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Profile from '../components/profile/profile'
 
 export default function Home() {
   const data = {
@@ -24,50 +25,6 @@ export default function Home() {
   }
 
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>{data.name}</title>
-        <link rel="icon" href={data.image} />
-      </Head>
-
-      <Image
-        className={styles.image} 
-        src={data.image}
-        height={105}
-        width={105}
-      />
-
-      <div className={styles.name}>{data.name}</div>
-
-      <LinkButtonColumn labels={data.labels} links={data.links}/>
-    </div>
-  )
-}
-
-function LinkButtonColumn(props) {
-  const pairs = zip(props.labels, props.links)
-
-  return (
-    <div className={`${ styles.linkButtonColumn }`}>
-      {pairs.map(element => <LinkButton label={element[0]} link={element[1]}/>)}
-    </div>
-  )
-}
-
-function zip(a, b) {
-
-  const mapFunction = (element, index) => {
-    return [element, b[index]];
-  }
-
-  return a.map(mapFunction);
-}
-
-function LinkButton(props) {
-  return (
-    <div>
-      <a className={`btn btn-primary mb-2 btn-lg ${ styles.linkButton }`} href={props.link}>{props.label}</a>
-      <br/>
-    </div>
+    <Profile/>
   )
 }
