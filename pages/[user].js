@@ -25,18 +25,12 @@ const User = () => {
         'name': 'Erin Santamaria',
         'image': '/erinsantamaria.jpeg',
         'links': [
-          'https://www.tiktok.com/@andrew.robles',
-          'https://www.instagram.com/andrewroblesdev/',
-          'https://www.youtube.com/channel/UCqNGTj5w7NxE74m25So27gg',
-          'https://www.linkedin.com/in/andrew-robles-dev/',
-          'https://github.com/andrewrobles'
+            'https://www.tiktok.com/@recruiter_rin',
+            'https://www.linkedin.com/in/erin-santamaria-4604a274/',
         ],
         'labels': [
-          'TikTok',
-          'Instagram',
-          'YouTube',
-          'LinkedIn',
-          'Github'
+            'TikTok',
+            'LinkedIn',
         ]
     }
 
