@@ -1,4 +1,4 @@
-const andrewrobles = {
+const data = {
     'name': 'Andrew Robles',
     'image': '/andrewrobles.png',
     'links': [
@@ -15,10 +15,6 @@ const andrewrobles = {
         'LinkedIn',
         'Github'
     ]
-}
-
-const data = {
-    'andrewrobles': andrewrobles,
 }
 
 export default data

@@ -27,6 +27,6 @@ export default function Home() {
     }
 
   return (
-    <Profile data={data.andrewrobles}/>
+    <Profile data={data}/>
   )
 }
