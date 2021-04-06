@@ -1,6 +1,3 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Profile from '../components/profile/profile'
 
