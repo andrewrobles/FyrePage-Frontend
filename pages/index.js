@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Profile from '../components/profile/profile'
+import data from '../data/data'
 
 export default function Home() {
     const andrewrobles = {
@@ -26,6 +27,6 @@ export default function Home() {
     }
 
   return (
-    <Profile data={userData.andrewrobles}/>
+    <Profile data={data}/>
   )
 }
