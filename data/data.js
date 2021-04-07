@@ -1,6 +1,5 @@
 const data = {
     'name': 'Andrew Robles',
-    'image': '/andrewrobles.png',
     'links': [
         'https://www.tiktok.com/@andrew.robles',
         'https://www.instagram.com/andrewroblesdev/',
