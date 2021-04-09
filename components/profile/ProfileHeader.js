@@ -27,6 +27,7 @@ export default function ProfileHeader(data) {
 	const type = dat.type;
 	const image = dat.image;
 	const links = dat.links;
+	const subtext = dat.subtext
 
 	switch (type) {
   
@@ -59,6 +60,7 @@ export default function ProfileHeader(data) {
   
 			<div className={styles.compactContainer}>
 			  <div className={styles.compactName}>{name}</div>
+			  <Subtext text={subtext} />
 			  <CompactLinks links={links} />
 			</div>
 		  </div>
@@ -75,6 +77,10 @@ function CompactLinks(props) {
 	return (props.links.map(btn => <CompactLink link={btn.link} icon={btn.icon} />));
 }
 
+function Subtext(props) {
+	return (<p className={styles.headerSubtext}>{props.text}</p>)
+}
+
 /**
  * Compact Link Element
  * 
@@ -88,6 +94,6 @@ function CompactLink(props) {
 	console.log(icon, props.icon);
 
 	return (
-		<a className={styles.compactLink} href={link}><FontAwesomeIcon icon="twitter" /></a>
+		<a className={styles.compactLink} href={link}><FontAwesomeIcon className={styles.compactLinkIcon} icon={icon} size="xs" /></a>
 	)
 }

@@ -4,15 +4,16 @@
 	"background": null,
 	"header": {
 		"type": "compact",
+		"subtext": "Hello there humans o/",
 		"image": "/jackson.png",
 		"links": [
 			{
-				"link": "https://twitter.com/jrobe3221",
-				"icon": ["fab", "fa-twitter"]
+				"link": "https://github.com/HoloPanio",
+				"icon": ["fab", "github"]
 			},
 			{
 				"link": "https://twitter.com/jrobe3221",
-				"icon": "twitter"
+				"icon": ["fab", "twitter"]
 			}
 		]
 	},
