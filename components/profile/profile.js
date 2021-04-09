@@ -9,12 +9,12 @@ export default function Profile(props) {
     <div className={styles.container}>
       <Head>
         <title>{props.data.name}</title>
-        <link rel="icon" href='/profile.png' />
+        <link rel="icon" href={props.data.image} />
       </Head>
 
       <Image
         className={styles.image} 
-        src='/profile.png'
+        src={props.data.image}
         height={105}
         width={105}
       />

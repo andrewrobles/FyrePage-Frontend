@@ -5,6 +5,6 @@ import data from '../data/data'
 export default function Home() {
 
   return (
-    <Profile data={data}/>
+    <Profile data={data['andrewrobles']}/>
   )
 }

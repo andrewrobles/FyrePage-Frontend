@@ -1,5 +1,6 @@
-const data = {
+const andrewrobles = {
     'name': 'Andrew Robles',
+    'image': '/andrew.png',
     'links': [
         'https://www.tiktok.com/@andrew.robles',
         'https://www.instagram.com/andrewroblesdev/',
@@ -14,6 +15,10 @@ const data = {
         'LinkedIn',
         'Github'
     ]
+}
+
+const data = {
+    'andrewrobles': andrewrobles 
 }
 
 export default data
