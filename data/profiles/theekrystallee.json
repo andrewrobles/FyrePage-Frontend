@@ -1,0 +1,38 @@
+{
+    "name": "Krystal Lee",
+    "image": "/krystal.png",
+    "buttons": [
+        {
+            "link": "https://www.youtube.com/channel/UCXVGYwQXZ18CdlrMsBpQFsw",
+            "label": "Uncaught Exceptions YouTube"
+        },
+        {
+            "link": "https://open.spotify.com/episode/4x91OuTcadCUcHtCHfSr0Y",
+            "label": "Andrew Robles Podcast Inteview"
+        },
+        {
+            "link": "https://bitclout.com/u/theekrystallee",
+            "label": "the krystallee coin"
+        },
+        {
+            "link": "https://www.gofundme.com/c/act/stop-aapi-hate",
+            "label": "#StopAsianHate GoFundMe"
+        },
+        {
+            "link": "https://linktr.ee/creativeasians",
+            "label": "Creative Asian Community"
+        },
+        {
+            "link": "https://docs.google.com/forms/d/e/1FAIpQLSdsU8QGGRQhgwcJy69jMgMobwwDsOOBCvpKnYI6kPq9MLfY9Q/viewform",
+            "label": "apply to be my simp"
+        },
+        {
+            "link": "https://discord.com/invite/wYsNTgywF2",
+            "label": "Creators of TechTok Discord"
+        },
+        {
+            "link": "https://anchor.fm/uncaughtexceptions",
+            "label": "Podcast Links"
+        }
+    ]
+}

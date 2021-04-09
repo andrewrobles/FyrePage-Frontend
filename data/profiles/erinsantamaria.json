@@ -1,0 +1,14 @@
+{
+    "name": "Erin Santamaria",
+    "image": "/erin.png",
+    "buttons": [
+        {
+            "link": "https://www.tiktok.com/@recruiter_rin",
+            "label": "TikTok"
+        },
+        {
+            "link": "https://www.linkedin.com/in/erin-santamaria-4604a274",
+            "label": "LinkedIn"
+        }
+    ]
+} 
