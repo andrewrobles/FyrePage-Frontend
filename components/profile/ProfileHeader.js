@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styles from './profile.module.css'
 import Image from 'next/image'
 
@@ -18,6 +19,7 @@ export default function ProfileHeader(data) {
 	const name = data.name;
 	const type = dat.type;
 	const image = dat.image;
+	const links = dat.links;
   
 	switch (type) {
   
@@ -50,10 +52,34 @@ export default function ProfileHeader(data) {
   
 			<div className={styles.compactContainer}>
 			  <div className={styles.compactName}>{name}</div>
+			  <CompactLinks links={links} />
 			</div>
 		  </div>
 		)
 	  break;
   
 	}
-  }
+}
+
+/**
+ * Compact Links Compiler
+ */
+function CompactLinks(links) {
+	if (!links) return;
+	return (links.map(btn => <CompactLink link={btn.link} icon={btn.icon} />));
+}
+
+/**
+ * Compact Link Element
+ * 
+ * The compact link element will allow you to create small links in the compact profile header that will use font awesome icons
+ * and a link that will go to the desired destination.
+ */
+function CompactLink(props) {
+	const link = props.length ? props.length : "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+	const icon = props.icon ? props.icon : ["fa", "fa-laugh-wink"];
+
+	return (
+		<a className={styles.compactLink} href={link}><FontAwesomeIcon icon={icon} /></a>
+	)
+}

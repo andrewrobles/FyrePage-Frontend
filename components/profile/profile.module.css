@@ -59,6 +59,8 @@
   background: black;
 }
 
+.compactLink {}
+
 .description {
   font-family: 'Ubuntu', sans-serif;
   padding-bottom: 18px;

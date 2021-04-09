@@ -4,7 +4,13 @@
 	"background": null,
 	"header": {
 		"type": "compact",
-		"image": "/jackson.png"
+		"image": "/jackson.png",
+		"links": [
+			{
+				"link": "https://twitter.com/jrobe3221",
+				"icon": "twitter"
+			}
+		]
 	},
 	"buttons": [
 		{
