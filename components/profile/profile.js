@@ -21,17 +21,17 @@ export default function Profile(props) {
 
       <div className={styles.name}>{props.data.name}</div>
 
-      <LinkButtonColumn labels={props.data.labels} links={props.data.links}/>
+      <LinkButtonColumn buttons={props.data.buttons} />
     </div>
   )
 }
 
 function LinkButtonColumn(props) {
-  const pairs = zip(props.labels, props.links)
+  const buttons = props.buttons
 
   return (
     <div className={`${ styles.linkButtonColumn }`}>
-      {pairs.map(element => <LinkButton label={element[0]} link={element[1]}/>)}
+      {buttons.map(button => <LinkButton label={button['label']} link={button['link']}/>)}
     </div>
   )
 }
