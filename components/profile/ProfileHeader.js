@@ -54,7 +54,7 @@ export default function ProfileHeader(data) {
   
 			<div className={styles.compactContainer}>
 			  <div className={styles.compactName}>{name}</div>
-			  //<CompactLinks links={links} />
+			  
 			</div>
 		  </div>
 		)
