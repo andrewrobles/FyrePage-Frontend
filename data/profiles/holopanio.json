@@ -8,7 +8,7 @@
 		"links": [
 			{
 				"link": "https://twitter.com/jrobe3221",
-				"icon": "twitter"
+				"icon": ["fab", "twitter"]
 			},
 			{
 				"link": "https://twitter.com/jrobe3221",
