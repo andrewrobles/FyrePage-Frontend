@@ -36,7 +36,7 @@ export default function Profile(props) {
 function ProfileHeader(data) {
   const dat = data.dat;
 
-  const name = dat.name;
+  const name = data.name;
   const type = dat.type;
   const image = dat.image;
 
