@@ -11,6 +11,16 @@
   padding-top: 20vh;
 }
 
+/**
+ *
+ * PROFILE HEADER
+ *
+ */
+
+ .defaultProfileHeader {
+  text-align: center;
+}
+
 .name {
   font-family: 'Ubuntu', sans-serif;
   font-size: 23px;
@@ -19,13 +29,21 @@
   padding-top: 10px;
 }
 
-.defaultProfileHeader {
-  text-align: center;
-}
+
 
 .compactProfileHeader {
   text-align: left;
+  display: -webkit-inline-box;
+  width: 375px;
 }
+
+.compactContainer {}
+
+.compactName {
+  padding-top: 0;
+  margin-left: 10px;
+}
+
 
 .description {
   font-family: 'Ubuntu', sans-serif;
@@ -34,6 +52,12 @@
   font-size: 17px;
   color: #553320;
 }
+
+/**
+ *
+ * BODY CONTENT
+ *
+ */
 
 .linkButton {
   width: 375px;

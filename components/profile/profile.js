@@ -66,8 +66,10 @@ function ProfileHeader(data) {
             height={75}
             width={75}
           />
-  
-          <div className={styles.name}>{name}</div>
+
+          <div className={styles.compactContainer}>
+            <div className={styles.compactName}>{name}</div>
+          </div>
         </div>
       )
     break;
