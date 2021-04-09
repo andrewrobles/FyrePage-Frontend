@@ -12,18 +12,56 @@ export default function Profile(props) {
         <link rel="icon" href={props.data.image} />
       </Head>
 
-      <Image
-        className={styles.image} 
-        src={props.data.image}
-        height={105}
-        width={105}
+      <ProfileHeader
+        dat={props.data.header}
+        username={props.data.name}
       />
-
-      <div className={styles.name}>{props.data.name}</div>
 
       <LinkButtonColumn buttons={props.data.buttons} />
     </div>
   )
+}
+
+/**
+ * Profile Header Element
+ * 
+ * This is the profile Header element.  This will create the profile header with the profile picture, username, etc.
+ * There will be multiple types of profile headers.  The profile header types are as defined:
+ * 
+ * * default - The default layout of the profile with the Picture above above the username.
+ * * compact - If you have a lot of links and you dont want to create a great long list of then, you can use this
+ *             profile header to include more profile links as small icons.  This will also compress your profile
+ *             picture to a smaller 
+ */
+function ProfileHeader(data) {
+  const dat = data.dat;
+
+  const name = dat.name;
+  const type = dat.type;
+  const image = dat.image;
+
+  switch (type) {
+
+    case 'default':
+      return (
+        <div className={styles.profileHeader}>
+          <Image 
+            className={styles.image} 
+            src={image}
+            height={105}
+            width={105}
+          />
+  
+          <div className={styles.name}>{name}</div>
+        </div>
+      )
+    break;
+
+    case 'compact':
+
+    break;
+
+  }
 }
 
 function LinkButtonColumn(props) {

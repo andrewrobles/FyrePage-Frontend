@@ -1,6 +1,11 @@
 {
     "name": "Krystal Lee",
-    "image": "/krystal.png",
+    "bio": null,
+    "background": null,
+	"header": {
+		"type": "default",
+		"image": "/krystal.png"
+	},
     "buttons": [
         {
             "link": "https://www.youtube.com/channel/UCXVGYwQXZ18CdlrMsBpQFsw",

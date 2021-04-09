@@ -1,6 +1,11 @@
 {
 	"name": "Jackson Roberts",
-	"image": "/jackson.png",
+	"bio": null,
+	"background": null,
+	"header": {
+		"type": "default",
+		"image": "/jackson.png"
+	},
 	"buttons": [
 		{
 			"link": "https://www.tiktok.com/@holopanio",

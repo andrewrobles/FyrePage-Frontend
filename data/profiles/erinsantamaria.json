@@ -1,6 +1,11 @@
 {
     "name": "Erin Santamaria",
-    "image": "/erin.png",
+	"bio": null,
+	"background": null,
+	"header": {
+		"type": "default",
+		"image": "/erin.png"
+	},
     "buttons": [
         {
             "link": "https://www.tiktok.com/@recruiter_rin",

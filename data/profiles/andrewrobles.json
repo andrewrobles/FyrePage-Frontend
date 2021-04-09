@@ -1,6 +1,11 @@
 {
     "name": "Andrew Robles",
-    "image": "/andrew.png",
+	"bio": null,
+	"background": null,
+	"header": {
+		"type": "default",
+		"image": "/andrew.png"
+	},
     "buttons": [
         {
             "link": "https://www.tiktok.com/@andrew.robles",
