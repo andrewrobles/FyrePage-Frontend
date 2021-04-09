@@ -1,11 +1,6 @@
-//const fs = require('fs');
-//const files = fs.readdirSync(`${__dirname}/profiles`);
+let data = {
+    holopanio: require('./profiles/holopanio.json');
+    andrewrobles: require('./profiles/andrewrobles.json');
+}
 
-let data = {}
-/*
-files.forEach(f => {
-    let fn = f.split('.')[0];
-    data[fn] = require(f);
-})
-*/
 export default data
