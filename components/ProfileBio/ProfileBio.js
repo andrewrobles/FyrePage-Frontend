@@ -7,5 +7,6 @@ import styles from './ProfileBio.module.css'
  */
 export default function ProfileBio(props) {
 	const bio = props.bio;
-	return(<div className={styles.profileBio}>{bio}</div>);
+	if (bio != null) return(<div className={styles.profileBio}>{bio}</div>);
+	else return null;
 }
