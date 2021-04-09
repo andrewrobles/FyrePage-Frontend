@@ -45,4 +45,7 @@
     width: 95vw;
   }
 
+  .container {
+    padding-top: 10vh;
+  }
 }
