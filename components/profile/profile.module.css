@@ -19,7 +19,13 @@
   padding-top: 10px;
 }
 
-.profileHeader {}
+.defaultProfileHeader {
+  text-align: center;
+}
+
+.compactProfileHeader {
+  text-align: left;
+}
 
 .description {
   font-family: 'Ubuntu', sans-serif;

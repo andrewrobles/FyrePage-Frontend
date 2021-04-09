@@ -44,7 +44,7 @@ function ProfileHeader(data) {
 
     case 'default':
       return (
-        <div className={styles.profileHeader}>
+        <div className={styles.defaultProfileHeader}>
           <Image 
             className={styles.image} 
             src={image}
@@ -58,7 +58,18 @@ function ProfileHeader(data) {
     break;
 
     case 'compact':
-
+      return (
+        <div className={styles.compactProfileHeader}>
+          <Image 
+            className={styles.image} 
+            src={image}
+            height={75}
+            width={75}
+          />
+  
+          <div className={styles.name}>{name}</div>
+        </div>
+      )
     break;
 
   }

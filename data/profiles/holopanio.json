@@ -3,7 +3,7 @@
 	"bio": null,
 	"background": null,
 	"header": {
-		"type": "default",
+		"type": "compact",
 		"image": "/jackson.png"
 	},
 	"buttons": [
