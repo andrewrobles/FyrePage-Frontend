@@ -75,7 +75,7 @@ function CompactLinks(props) {
  * and a link that will go to the desired destination.
  */
 function CompactLink(props) {
-	const link = props.length ? props.length : "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+	const link = props.link ? props.link : "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 	const icon = props.icon ? props.icon : ["fa", "fa-laugh-wink"];
 
 	return (
