@@ -20,6 +20,8 @@ export default function ProfileHeader(data) {
 	const type = dat.type;
 	const image = dat.image;
 	const links = dat.links;
+
+	console.log(links);
   
 	switch (type) {
   
@@ -52,7 +54,7 @@ export default function ProfileHeader(data) {
   
 			<div className={styles.compactContainer}>
 			  <div className={styles.compactName}>{name}</div>
-			  <CompactLinks links={links} />
+			  //<CompactLinks links={links} />
 			</div>
 		  </div>
 		)
