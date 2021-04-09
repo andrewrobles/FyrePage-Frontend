@@ -88,6 +88,6 @@ function CompactLink(props) {
 	console.log(icon, props.icon);
 
 	return (
-		<a className={styles.compactLink} href={link}><FontAwesomeIcon icon={icon} /></a>
+		<a className={styles.compactLink} href={link}><FontAwesomeIcon icon="twitter" /></a>
 	)
 }
