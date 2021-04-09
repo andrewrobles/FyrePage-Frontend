@@ -1,6 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from "@fortawesome/fontawesome-svg-core";
 import styles from './profile.module.css'
 import Image from 'next/image'
+
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import "@fortawesome/free-regular-svg-icons";
+import "@fortawesome/free-solid-svg-icons";
+
+library.add(fab);
 
 /**
  * Profile Header Element
