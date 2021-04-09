@@ -14,7 +14,7 @@ export default function Profile(props) {
 
       <ProfileHeader
         dat={props.data.header}
-        username={props.data.name}
+        name={props.data.name}
       />
 
       <LinkButtonColumn buttons={props.data.buttons} />
