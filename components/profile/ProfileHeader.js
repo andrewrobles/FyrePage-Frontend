@@ -78,6 +78,8 @@ function CompactLink(props) {
 	const link = props.link ? props.link : "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 	const icon = props.icon ? props.icon : ["fa", "fa-laugh-wink"];
 
+	console.log(icon, props.icon);
+
 	return (
 		<a className={styles.compactLink} href={link}><FontAwesomeIcon icon={icon} /></a>
 	)
