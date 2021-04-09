@@ -24,13 +24,15 @@ const holopanio = {
         'https://www.tiktok.com/@holopanio',
         'https://www.instagram.com/holopaino/',
         'https://dogehouse.tv/user/HoloPanio',
-        'https://github.com/HoloPanio'
+        'https://github.com/HoloPanio',
+        'https://twitch.tv/holopaino'
     ],
     'labels': [
         'TikTok',
         'Instagram',
         'Dogehouse',
         'Github',
+        'Twitch'
     ]
 }
 
