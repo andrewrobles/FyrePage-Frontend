@@ -65,7 +65,6 @@ export default function ProfileHeader(data) {
  * Compact Links Compiler
  */
 function CompactLinks(links) {
-	if (!links) return;
 	return (links.map(btn => <CompactLink link={btn.link} icon={btn.icon} />));
 }
 
