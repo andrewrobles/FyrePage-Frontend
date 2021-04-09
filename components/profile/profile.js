@@ -67,6 +67,8 @@ function ProfileHeader(data) {
             width={75}
           />
 
+          <div className={styles.verticalDiv}></div>
+
           <div className={styles.compactContainer}>
             <div className={styles.compactName}>{name}</div>
           </div>

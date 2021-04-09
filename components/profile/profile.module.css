@@ -44,6 +44,14 @@
   margin-left: 10px;
 }
 
+.verticalDiv {
+  width: 1px;
+  height: fit-content;
+  border-left: 1px solid black;
+
+  padding-left: 2px;
+  padding-right: 2px;
+}
 
 .description {
   font-family: 'Ubuntu', sans-serif;
