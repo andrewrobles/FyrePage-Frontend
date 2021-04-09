@@ -1,77 +1,109 @@
 const andrewrobles = {
     'name': 'Andrew Robles',
     'image': '/andrew.png',
-    'links': [
-        'https://www.tiktok.com/@andrew.robles',
-        'https://www.instagram.com/andrewroblesdev/',
-        'https://www.youtube.com/channel/UCqNGTj5w7NxE74m25So27gg',
-        'https://www.linkedin.com/in/andrew-robles-dev/',
-        'https://github.com/andrewrobles'
+    'buttons': [
+        {
+            'link': 'https://www.tiktok.com/@andrew.robles',
+            'label': 'TikTok'
+        },
+        {
+            'link': 'https://www.instagram.com/andrewroblesdev/',
+            'label': 'Instagram'
+        },
+        {
+            'link': 'https://www.youtube.com/channel/UCqNGTj5w7NxE74m25So27gg',
+            'label': 'TikTok'
+        },
+        {
+            'link': 'https://www.linkedin.com/in/andrew-robles-dev/',
+            'label': 'YouTube'
+        },
+        {
+            'link': 'https://github.com/andrewrobles',
+            'label': 'Github'
+        },
     ],
-    'labels': [
-        'TikTok',
-        'Instagram',
-        'YouTube',
-        'LinkedIn',
-        'Github'
-    ]
 }
 
 const holopanio = {
     'name': 'Jackson Roberts',
     'image': '/jackson.png',
-    'links': [
-        'https://www.tiktok.com/@holopanio',
-        'https://www.instagram.com/holopaino/',
-        'https://dogehouse.tv/user/HoloPanio',
-        'https://github.com/HoloPanio',
-        'https://twitch.tv/holopaino'
+    'buttons': [
+        {
+            'link': 'https://www.tiktok.com/@holopanio',
+            'label': 'TikTok'
+        },
+        {
+            'link': 'https://www.instagram.com/holopaino/',
+            'label': 'Instagram'
+        },
+        {
+            'link': 'https://dogehouse.tv/user/HoloPanio',
+            'label': 'Dogehouse'
+        },
+        {
+            'link': 'https://github.com/HoloPanio',
+            'label': 'Github'
+        },
+        {
+            'link': 'https://twitch.tv/holopaino',
+            'label': 'Twitch'
+        },
     ],
-    'labels': [
-        'TikTok',
-        'Instagram',
-        'Dogehouse',
-        'Github',
-        'Twitch'
-    ]
 }
 
 const erinsantamaria = {
     'name': 'Erin Santamaria',
     'image': '/erin.png',
-    'links': [
-        'https://www.tiktok.com/@recruiter_rin',
-        'https://www.linkedin.com/in/erin-santamaria-4604a274',
+    'buttons': [
+        {
+            'link': 'https://www.tiktok.com/@recruiter_rin',
+            'label': 'TikTok'
+        },
+        {
+            'link': 'https://www.linkedin.com/in/erin-santamaria-4604a274',
+            'label': 'LinkedIn'
+        },
     ],
-    'labels': [
-        'TikTok',
-        'LinkedIn',
-    ]
 } 
 
 const theekrystallee = {
     'name': 'Krystal Lee',
     'image': '/krystal.png',
-    'links': [
-        'https://www.youtube.com/channel/UCXVGYwQXZ18CdlrMsBpQFsw',
-        'https://open.spotify.com/episode/4x91OuTcadCUcHtCHfSr0Y',
-        'https://bitclout.com/u/theekrystallee',
-        'https://www.gofundme.com/c/act/stop-aapi-hate',
-        'https://linktr.ee/creativeasians',
-        'https://docs.google.com/forms/d/e/1FAIpQLSdsU8QGGRQhgwcJy69jMgMobwwDsOOBCvpKnYI6kPq9MLfY9Q/viewform',
-        'https://discord.com/invite/wYsNTgywF2',
-        'https://anchor.fm/uncaughtexceptions',
+    'buttons': [
+        {
+            'link': 'https://www.youtube.com/channel/UCXVGYwQXZ18CdlrMsBpQFsw',
+            'label': 'Uncaught Exceptions YouTube'
+        },
+        {
+            'link': 'https://open.spotify.com/episode/4x91OuTcadCUcHtCHfSr0Y',
+            'label': 'Andrew Robles Podcast Inteview'
+        },
+        {
+            'link': 'https://bitclout.com/u/theekrystallee',
+            'label': 'the krystallee coin'
+        },
+        {
+            'link': 'https://www.gofundme.com/c/act/stop-aapi-hate',
+            'label': '#StopAsianHate GoFundMe'
+        },
+        {
+            'link': 'https://linktr.ee/creativeasians',
+            'label': 'Creative Asian Community'
+        },
+        {
+            'link': 'https://docs.google.com/forms/d/e/1FAIpQLSdsU8QGGRQhgwcJy69jMgMobwwDsOOBCvpKnYI6kPq9MLfY9Q/viewform',
+            'label': 'apply to be my simp'
+        },
+        {
+            'link': 'https://discord.com/invite/wYsNTgywF2',
+            'label': 'Creators of TechTok Discord'
+        },
+        {
+            'link': 'https://anchor.fm/uncaughtexceptions',
+            'label': 'Podcast Links'
+        },
     ],
-    'labels': [
-        'Uncaught Exceptions YouTube',
-        'Andrew Robles Podcast Interview',
-        'thekrystallee coin',
-        '#StopAsianHate GoFundMe',
-        'Creative Asian Community',
-        'apply to be my simp',
-        'Creators of TechTok Discord',
-        'Podcast Links'
-    ]
 }
 
 const data = {
