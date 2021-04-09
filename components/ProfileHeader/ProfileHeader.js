@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from "@fortawesome/fontawesome-svg-core";
-import styles from './profile.module.css'
+import styles from './ProfileHeader.module.css'
 import Image from 'next/image'
 
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -77,6 +77,12 @@ function CompactLinks(props) {
 	return (props.links.map(btn => <CompactLink link={btn.link} icon={btn.icon} />));
 }
 
+/**
+ * Subtext Element
+ * 
+ * This element will add a small bit of text under the name which will be just a quick memo or something of note to
+ * anybody who may be viewing the website.
+ */
 function Subtext(props) {
 	return (<p className={styles.headerSubtext}>{props.text}</p>)
 }
@@ -94,6 +100,6 @@ function CompactLink(props) {
 	console.log(icon, props.icon);
 
 	return (
-		<a className={styles.compactLink} href={link}><FontAwesomeIcon className={styles.compactLinkIcon} icon={icon} size="xs" /></a>
+		<a className={styles.compactLink} href={link}><FontAwesomeIcon className={styles.compactLinkIcon} icon={icon} /></a>
 	)
 }

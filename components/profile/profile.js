@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from './profile.module.css'
-import ProfileHeader from './ProfileHeader';
+import ProfileBio from '../ProfileBio/ProfileBio';
+import ProfileHeader from '../ProfileHeader/ProfileHeader';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function Profile(props) {
@@ -12,10 +13,12 @@ export default function Profile(props) {
         <link rel="icon" href={props.data.image} />
       </Head>
 
-      <ProfileHeader
+      <ProfileHeader 
         dat={props.data.header}
         name={props.data.name}
       />
+
+      <ProfileBio bio={props.data.bio} />
 
       <LinkButtonColumn buttons={props.data.buttons} />
     </div>
