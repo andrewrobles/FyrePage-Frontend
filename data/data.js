@@ -1,5 +1,4 @@
-import fs from 'fs';
-
+const fs = require('fs');
 const files = fs.readdirSync(`${__dirname}/profiles`);
 
 let data = {}
