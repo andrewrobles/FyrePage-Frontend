@@ -62,7 +62,7 @@ function ProfilePanelButton(props) {
 		backgroundColor: background,
 	}
 
-	return (<a style={{color: "inherit"}} href={link}><div style={style} className={styles.panelButton}><PanelIcon icon={icon}/> <span>{label}</span></div></a>);
+	return (<a style={{color: "inherit"}} href={link}><div className={styles.panelButton} style={style}><PanelIcon icon={icon}/> <span>{label}</span></div></a>);
 }
 
 /**
