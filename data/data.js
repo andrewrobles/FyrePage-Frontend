@@ -12,11 +12,11 @@ const andrewrobles = {
         },
         {
             'link': 'https://www.youtube.com/channel/UCqNGTj5w7NxE74m25So27gg',
-            'label': 'TikTok'
+            'label': 'Youtube'
         },
         {
             'link': 'https://www.linkedin.com/in/andrew-robles-dev/',
-            'label': 'YouTube'
+            'label': 'LinkedIn'
         },
         {
             'link': 'https://github.com/andrewrobles',
