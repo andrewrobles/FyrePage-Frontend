@@ -1,10 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Profile from '../components/profile/profile'
-import data from '../data/data'
+import Logo from '../components/Logo/Logo'
 
 export default function Home() {
 
   return (
-    <Profile data={data['andrewrobles']}/>
+    <Logo />
   )
 }
