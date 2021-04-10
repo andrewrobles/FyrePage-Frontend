@@ -3,11 +3,13 @@ import styles from './profile.module.css'
 import ProfileBio from '../ProfileBio/ProfileBio';
 import ProfileHeader from '../ProfileHeader/ProfileHeader';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import ProfilePanel from '../ProfilePanel/ProfilePanel';
 
 export default function Profile(props) {
 
   return (
     <div className={styles.container}>
+      <div className={styles.profileColumn}>
       <Head>
         <title>{props.data.name}</title>
         <link rel="icon" href={props.data.image} />
@@ -20,35 +22,53 @@ export default function Profile(props) {
 
       <ProfileBio bio={props.data.bio} />
 
-      <LinkButtonColumn buttons={props.data.buttons} />
+      <LinkPanelColumn panels={props.data.panels} />
+      </div>
     </div>
   )
 }
 
-function LinkButtonColumn(props) {
-  const buttons = props.buttons
+function LinkPanelColumn(props) {
+  const panels = props.panels
 
   return (
-    <div className={`${ styles.linkButtonColumn }`}>
-      {buttons.map(button => <LinkButton label={button['label']} link={button['link']}/>)}
+    <div className={styles.linkPanelColumn}>
+      {panels.map(panel => <ProfilePanel panel={panel}/>)}
     </div>
   )
 }
 
-function zip(a, b) {
+function getImageBrightness(imageSrc,callback) {
+  var img = document.createElement("img");
+  img.src = imageSrc;
+  img.style.display = "none";
+  document.body.appendChild(img);
 
-  const mapFunction = (element, index) => {
-    return [element, b[index]];
+  var colorSum = 0;
+
+  img.onload = function() {
+      // create canvas
+      var canvas = document.createElement("canvas");
+      canvas.width = this.width;
+      canvas.height = this.height;
+
+      var ctx = canvas.getContext("2d");
+      ctx.drawImage(this,0,0);
+
+      var imageData = ctx.getImageData(0,0,canvas.width,canvas.height);
+      var data = imageData.data;
+      var r,g,b,avg;
+
+        for(var x = 0, len = data.length; x < len; x+=4) {
+          r = data[x];
+          g = data[x+1];
+          b = data[x+2];
+
+          avg = Math.floor((r+g+b)/3);
+          colorSum += avg;
+      }
+
+      var brightness = Math.floor(colorSum / (this.width*this.height));
+      callback(brightness);
   }
-
-  return a.map(mapFunction);
-}
-
-function LinkButton(props) {
-  return (
-    <div>
-      <a className={`btn btn-primary mb-2 btn-lg ${ styles.linkButton }`} href={props.link}>{props.label}</a>
-      <br/>
-    </div>
-  )
 }

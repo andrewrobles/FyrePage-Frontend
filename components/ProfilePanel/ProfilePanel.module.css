@@ -1,0 +1,62 @@
+.panelIcon {
+
+	margin-right: 10px;
+	font-size: 25px;
+	padding-top: 3px;
+	margin-top: 2px;
+	margin-bottom: -3px;
+}
+
+.panelButton span {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.panelButton {
+	top: auto;
+	bottom: auto;
+
+	width: 375px;
+	height: 50px;
+
+	padding: 8px;
+	margin-top: 10px;
+	
+	border-radius: 8px;
+	
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.panelButtonImage {
+	max-width: 32px;
+	border-radius: 90px;
+	margin-right: 10px;
+}
+
+.panelDiscordWidget {
+	margin-top: 10px;
+}
+
+.panelYTVideoWidget {
+	margin-top: 10px;
+	border-radius: 10px;
+}
+
+.panelButton a:hover  {
+	text-decoration: none;
+}
+
+@media (max-width: 400px) {
+	.panelButton { 
+		width: 325px;
+	}
+
+	.panelDiscordWidget {
+		width: 325px;
+	}
+
+	.panelYTVideoWidget {
+		width: 325px;
+	}
+}

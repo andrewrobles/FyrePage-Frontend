@@ -2,7 +2,7 @@ import { FontawesomeObject } from "@fortawesome/fontawesome-svg-core";
 
 type PanelAlign = "left" | "center" | "right"
 type HeaderType = "default" | "compact"; // The type of header you want
-type ProfilePanelType = "link" | "discord-widget" // The type of profile panel you're trying to create
+type ProfilePanelType = "button" | "discord" | "youtubeVideo" // The type of profile panel you're trying to create
 type ImageResolvable = string; // Image path or Image URL 
 
 interface CompactLinks {
@@ -13,15 +13,16 @@ interface CompactLinks {
 interface ProfilePanel {
 	type: ProfilePanelType,
 	icon?: ImageResolvable | FontawesomeObject, // Panel Icon
-	color?: string, // Color of the panel (default black)
+	color?: string, // Color of the panel text (default white)
+	bgColor?: string, // color of the panel background (default black)
 	align?: PanelAlign, // How should the contents of the panel be aligned
 	priority?: boolean // Should this panel be pushed to the top of the panels?
 	link?: string // The link this panel will lead to (if any)
 	label?: string, // The label of the panel
-	discord?: string // Discord Server ID -- Only for discord widget
+	value?: string // Value option for certain panel types
 }
 
-export interface ProfileData {
+export default interface ProfileData {
 	name: string, // Profile name.
 	bio?: string | null, // null will return no bio at all.
 	backround?: ImageResolvable | null, // null will make the background white

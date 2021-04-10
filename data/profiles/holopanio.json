@@ -1,11 +1,11 @@
 {
 	"name": "Jackson Roberts",
-	"bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Ridiculus mus mauris vitae ultricies. Ut faucibus pulvinar elementum integer enim. Donec ac odio tempor orci dapibus ultrices in iaculis nunc.",
+	"bio": "Ya like jazz?",
 	"background": null,
 	"header": {
 		"type": "compact",
-		"subtext": "Hello there humans o/",
-		"image": "/jackson.png",
+		"subtext": "@HoloPanio",
+		"image": "/profile/jackson.png",
 		"links": [
 			{
 				"link": "https://github.com/HoloPanio",
@@ -14,9 +14,48 @@
 			{
 				"link": "https://twitter.com/jrobe3221",
 				"icon": ["fab", "twitter"]
+			},
+			{
+				"link": "https://twitch.tv/holopaino",
+				"icon": ["fab", "twitch"]
+			},
+			{
+				"link": "https://www.instagram.com/holopaino/",
+				"icon": ["fab", "instagram"]
+			},
+			{
+				"link": "https://www.tiktok.com/@holopanio",
+				"icon": ["fab", "tiktok"]
 			}
 		]
 	},
+	"panels": [
+		{
+			"type": "button",
+			"icon": "https://next.dogehouse.tv/img/doge.png",
+			"align": "left",
+			"link": "https://dogehouse.tv/user/HoloPanio",
+			"color": "lightgrey",
+			"label": "Dogehouse"
+		},
+		{
+			"type": "button",
+			"icon": ["fab", "twitch"],
+			"align": "left",
+			"link": "https://twitch.tv/holopaino",
+			"label": "Twitch",
+			"bgColor": "black",
+			"color": "lightgrey"
+		},
+		{
+			"type": "discord",
+			"value": "829508722480775168"
+		},
+		{
+			"type": "youtubeVideo",
+			"value": "dQw4w9WgXcQ"
+		}
+	],
 	"buttons": [
 		{
 			"link": "https://www.tiktok.com/@holopanio",
