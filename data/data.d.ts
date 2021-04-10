@@ -1,8 +1,7 @@
 import { FontawesomeObject } from "@fortawesome/fontawesome-svg-core";
 
-type PanelAlign = "left" | "center" | "right"
 type HeaderType = "default" | "compact"; // The type of header you want
-type ProfilePanelType = "button" | "discord" | "youtubeVideo" // The type of profile panel you're trying to create
+type ProfilePanelType = "button" | "discord" | "youtubeVideo" | "spotify" // The type of profile panel you're trying to create
 type ImageResolvable = string; // Image path or Image URL 
 
 interface CompactLinks {
@@ -15,7 +14,6 @@ interface ProfilePanel {
 	icon?: ImageResolvable | FontawesomeObject, // Panel Icon
 	color?: string, // Color of the panel text (default white)
 	bgColor?: string, // color of the panel background (default black)
-	align?: PanelAlign, // How should the contents of the panel be aligned
 	priority?: boolean // Should this panel be pushed to the top of the panels?
 	link?: string // The link this panel will lead to (if any)
 	label?: string, // The label of the panel

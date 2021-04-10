@@ -7,31 +7,47 @@
 	margin-bottom: -3px;
 }
 
-.panelButton span {
-	margin-top: auto;
-	margin-bottom: auto;
-}
-
 .panelButton {
-	top: auto;
-	bottom: auto;
-
 	width: 375px;
 	height: 50px;
 
-	padding: 8px;
 	margin-top: 10px;
-	
 	border-radius: 8px;
-	
+}
+
+.panelButton {
+	width: 375px;
+	height: 50px;
+
+	margin-top: 10px;
+	border-radius: 8px;
+}
+
+.panelButton .panelButtonContent {
+	width: 375px;
+	height: 50px;
+
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.panelButton .btnText {
 	font-size: 16px;
-	font-weight: bold;
+}
+
+.panelButton .btnIco {
+    top: 0;
+    margin-top: auto;
+    margin-bottom: 14px;
 }
 
 .panelButtonImage {
 	max-width: 32px;
 	border-radius: 90px;
-	margin-right: 10px;
+	margin-right: 8px;
+	margin-bottom: -4px;
 }
 
 .panelDiscordWidget {
@@ -40,6 +56,12 @@
 
 .panelYTVideoWidget {
 	margin-top: 10px;
+	border-radius: 10px;
+}
+
+.spotifyTrackWidget {
+	margin-top: 10px;
+	margin-bottom: -7px;
 	border-radius: 10px;
 }
 

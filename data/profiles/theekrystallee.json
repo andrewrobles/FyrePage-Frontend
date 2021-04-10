@@ -3,20 +3,61 @@
     "bio": null,
     "background": null,
 	"header": {
-		"type": "default",
-		"image": "/krystal.png"
+		"type": "compact",
+        "subtext": "@theekrystallee",
+		"image": "/profile/krystal.png",
+        "links": [
+            { 
+                "link": "https://www.youtube.com/channel/UCyMrIJVQ__XNA7b2mVF8G4A",
+                "icon": ["fab", "youtube"]
+            },
+            { 
+                "link": "https://tiktok.com/@theekrystallee",
+                "icon": ["fab", "tiktok"]
+            },
+            { 
+                "link": "https://www.snapchat.com/add/theekrystallee",
+                "icon": ["fab", "snapchat"]
+            },
+            { 
+                "link": "https://twitter.com/theekrystallee",
+                "icon": ["fab", "twitter"]
+            },
+            { 
+                "link": "https://instagram.com/theekrystallee",
+                "icon": ["fab", "instagram"]
+            },
+            { 
+                "link": "https://cash.app/$TechnoForLoop",
+                "icon": ["fas", "dollar-sign"]
+            },
+            { 
+                "link": "http://www.linkedin.com/in/theekrystallee",
+                "icon": ["fab", "linkedin"]
+            },
+            {
+                "link": "https://twitch.tv/krystalcodes",
+                "icon": ["fab", "twitch"]
+            }
+
+        ]
 	},
-    "buttons": [
+    "panels": [
         {
+            "type": "button",
+            "icon": ["fab", "youtube"],
             "link": "https://www.youtube.com/channel/UCXVGYwQXZ18CdlrMsBpQFsw",
             "label": "Uncaught Exceptions YouTube"
         },
         {
-            "link": "https://open.spotify.com/episode/4x91OuTcadCUcHtCHfSr0Y",
-            "label": "Andrew Robles Podcast Inteview"
+            "type": "spotifyTrack",
+            "value": { 
+                "type": "episode", 
+                "id": "4x91OuTcadCUcHtCHfSr0Y"
+            }
         },
         {
-            "link": "https://bitclout.com/u/theekrystallee",
+            "type": "https://bitclout.com/u/theekrystallee",
             "label": "the krystallee coin"
         },
         {

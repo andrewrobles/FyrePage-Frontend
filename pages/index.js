@@ -1,8 +1,5 @@
-import Profile from '../components/profile/profile';
-import data from '../data/data';
-
 const Home = () => {  
-  return <Profile data={data['andrewrobles']}/>
+  return <p>Home</p>
 }
 
 export default Home;

@@ -33,7 +33,6 @@
 		{
 			"type": "button",
 			"icon": "https://next.dogehouse.tv/img/doge.png",
-			"align": "left",
 			"link": "https://dogehouse.tv/user/HoloPanio",
 			"color": "lightgrey",
 			"label": "Dogehouse"
@@ -41,7 +40,6 @@
 		{
 			"type": "button",
 			"icon": ["fab", "twitch"],
-			"align": "left",
 			"link": "https://twitch.tv/holopaino",
 			"label": "Twitch",
 			"bgColor": "black",
@@ -54,28 +52,13 @@
 		{
 			"type": "youtubeVideo",
 			"value": "dQw4w9WgXcQ"
-		}
-	],
-	"buttons": [
-		{
-			"link": "https://www.tiktok.com/@holopanio",
-			"label": "TikTok"
 		},
 		{
-			"link": "https://www.instagram.com/holopaino/",
-			"label": "Instagram"
-		},
-		{
-			"link": "https://dogehouse.tv/user/HoloPanio",
-			"label": "Dogehouse"
-		},
-		{
-			"link": "https://github.com/HoloPanio",
-			"label": "Github"
-		},
-		{
-			"link": "https://twitch.tv/holopaino",
-			"label": "Twitch"
+			"type": "spotify",
+			"value": {
+				"type":"track", 
+				"id": "4fNIyy3MeTurkJyOiSfDeD"
+			}
 		}
 	]
 }

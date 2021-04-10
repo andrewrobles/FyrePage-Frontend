@@ -4,14 +4,22 @@
 	"background": null,
 	"header": {
 		"type": "default",
-		"image": "/erin.png"
+        "subtext": null,
+		"image": "/profile/erin.png",
+        "links": []
 	},
-    "buttons": [
+    "panels": [
         {
+            "type": "default",
+            "icon": ["fab", "tiktok"],
+            "align": "center",
             "link": "https://www.tiktok.com/@recruiter_rin",
             "label": "TikTok"
         },
         {
+            "type": "default",
+            "icon": ["fab", "linkedin"],
+            "align": "center",
             "link": "https://www.linkedin.com/in/erin-santamaria-4604a274",
             "label": "LinkedIn"
         }

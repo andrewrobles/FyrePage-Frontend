@@ -4,10 +4,10 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import styles from "./ProfilePanel.module.css";
 import Image from 'next/image';
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import "@fortawesome/free-regular-svg-icons";
-import "@fortawesome/free-solid-svg-icons";
+import { far } from "@fortawesome/free-regular-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
 
-library.add(fab);
+library.add(fab, fas, far);
 
 /**
  * Profile Panel
@@ -23,6 +23,9 @@ export default function ProfilePanel(props) {
 		case "button": return (<ProfilePanelButton panel={panel}/>); break;
 		case "discord": return (<DiscordPanel id={panel.value}/>); break;
 		case "youtubeVideo": return (<YTVideoPanel id={panel.value}/>); break;
+		case "spotify": return (<SpotifyTrack data={panel.value}/>); break;
+
+		default: return (<ProfilePanelButton panel={panel}/>); break;
 
 	}
 }
@@ -54,15 +57,22 @@ function ProfilePanelButton(props) {
 	const color = data.color ? data.color : 'white';
 	const background = data.bgColor ? data.bgColor : 'black';
 	const icon = data.icon;
-	const align = data.align ? data.align : "center";
 
 	const style = {
 		color: color,
-		textAlign: align,
 		backgroundColor: background,
 	}
 
-	return (<a style={{color: "inherit"}} href={link}><div className={styles.panelButton} style={style}><PanelIcon icon={icon}/> <span>{label}</span></div></a>);
+	return (
+		<a style={{color: "inherit"}} href={link}>
+			<div className={styles.panelButton} style={style}>
+				<div className={styles.panelButtonContent}>
+					<span className={styles.btnIco}><PanelIcon icon={icon}/></span> 
+					<span className={styles.btnText}>{label}</span>
+				</div>
+			</div>
+		</a>
+	);
 }
 
 /**
@@ -87,6 +97,12 @@ function DiscordPanel(props) {
 	);
 }
 
+/**
+ * Youtube Video Panel
+ * 
+ * This will place a youtube embed on your profile which will be able to play or redirect to a youtube video
+ * right on your profile
+ */
 function YTVideoPanel(props) {
 	const id = props.id;
 	const link = `https://www.youtube.com/embed/${id}`;
@@ -100,6 +116,33 @@ function YTVideoPanel(props) {
 				frameBorder="0" 
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 				allowFullScreen
+			/>
+		</div>
+	)
+}
+
+function SpotifyTrack(props) {
+	const id = props.data.id;
+	const type = props.data.type;
+	const link = `https://open.spotify.com/embed/${type}/${id}`
+
+	if (!id) return null;
+	if (!type) return null;
+
+	const allowedTypes = ['episode', 'track']
+	const height = (type == "episode" ? "152" : "80");
+
+	if (!allowedTypes.includes(type)) return null;
+
+	return (
+		<div>
+			<iframe 
+				src={link}
+				className={styles.spotifyTrackWidget}
+				width="375" height={height } 
+				frameBorder="0" 
+				allowtransparency="true" 
+				allow="encrypted-media" 
 			/>
 		</div>
 	)
