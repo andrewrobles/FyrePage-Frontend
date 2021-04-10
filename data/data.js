@@ -1,6 +1,6 @@
 const andrewrobles = {
     'name': 'Andrew Robles',
-    'image': '/andrew.png',
+    'image': '/andrew.jpeg',
     'buttons': [
         {
             'link': 'https://www.tiktok.com/@andrew.robles',
@@ -12,11 +12,11 @@ const andrewrobles = {
         },
         {
             'link': 'https://www.youtube.com/channel/UCqNGTj5w7NxE74m25So27gg',
-            'label': 'TikTok'
+            'label': 'Youtube'
         },
         {
             'link': 'https://www.linkedin.com/in/andrew-robles-dev/',
-            'label': 'YouTube'
+            'label': 'LinkedIn'
         },
         {
             'link': 'https://github.com/andrewrobles',
@@ -27,7 +27,7 @@ const andrewrobles = {
 
 const holopanio = {
     'name': 'Jackson Roberts',
-    'image': '/jackson.png',
+    'image': '/jackson.jpeg',
     'buttons': [
         {
             'link': 'https://www.tiktok.com/@holopanio',
@@ -54,7 +54,7 @@ const holopanio = {
 
 const erinsantamaria = {
     'name': 'Erin Santamaria',
-    'image': '/erin.png',
+    'image': '/erin.jpeg',
     'buttons': [
         {
             'link': 'https://www.tiktok.com/@recruiter_rin',
@@ -69,7 +69,7 @@ const erinsantamaria = {
 
 const theekrystallee = {
     'name': 'Krystal Lee',
-    'image': '/krystal.png',
+    'image': '/krystal.jpeg',
     'buttons': [
         {
             'link': 'https://www.youtube.com/channel/UCXVGYwQXZ18CdlrMsBpQFsw',
