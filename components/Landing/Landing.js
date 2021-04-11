@@ -15,7 +15,7 @@ export default function Landing() {
         <div className="row justify-content-center">
           <Summary />
         </div>
-        <div className="row jusity-content-center">
+        <div className="row justify-content-center p-2">
           <Button />
         </div>
       </div>
