@@ -1,6 +1,6 @@
 {
     "name": "Krystal Lee",
-    "bio": "A test bio",
+    "bio": "Tech | Podcaster | ex-DJ-Sitter",
     "background": null,
 	"header": {
 		"type": "compact",
@@ -57,24 +57,32 @@
             "link": "https://bitclout.com/u/theekrystallee"
         },
         {
+            "type": "button",
+            "icon": "https://www.pngjoy.com/pngm/263/5053594_gofundme-logo-go-fund-me-logo-hd-png.png",
             "link": "https://www.gofundme.com/c/act/stop-aapi-hate",
             "label": "#StopAsianHate GoFundMe"
         },
         {
+            "type": "button",
+            "icon": ["fa", "link"],
             "link": "https://linktr.ee/creativeasians",
             "label": "Creative Asian Community"
         },
         {
+            "type": "button",
+            "icon": ["fa", "file-alt"],
             "link": "https://docs.google.com/forms/d/e/1FAIpQLSdsU8QGGRQhgwcJy69jMgMobwwDsOOBCvpKnYI6kPq9MLfY9Q/viewform",
-            "label": "apply to be my simp"
+            "label": "Apply to be my simp!!"
         },
         {
-            "link": "https://discord.com/invite/wYsNTgywF2",
-            "label": "Creators of TechTok Discord"
-        },
-        {
+            "type": "button",
+            "icon": ["fa", "rss"],
             "link": "https://anchor.fm/uncaughtexceptions",
             "label": "Podcast Links"
+        },
+        {
+            "type": "discord",
+            "value": "787138023791525949"
         },
         {
             "type": "spotify",
