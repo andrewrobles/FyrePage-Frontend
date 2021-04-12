@@ -31,9 +31,26 @@ export default function Profile(props) {
 function LinkPanelColumn(props) {
   const panels = props.panels
 
-  return (
+  let pinnedPanels = [];
+  let regularPanels = [];
+
+  panels.map(pan => {
+    if (pan.pinned) pinnedPanels.push(pan);
+    else regularPanels.push(pan);
+  })
+
+  if (pinnedPanels.length > 0) return (
     <div className={styles.linkPanelColumn}>
-      {panels.map(panel => <ProfilePanel panel={panel}/>)}
+      <div className={styles.pinnedLinkPanelColumn}>
+        {pinnedPanels.map(panel => <ProfilePanel pinned={true} panel={panel}/>)}
+      </div>
+      <hr className={styles.pinnedPanelsDivider} />
+      {regularPanels.map(panel => <ProfilePanel panel={panel}/>)}
+    </div>
+  );
+  else return (
+    <div className={styles.linkPanelColumn}>
+      {regularPanels.map(panel => <ProfilePanel panel={panel}/>)}
     </div>
   )
 }

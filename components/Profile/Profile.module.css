@@ -20,6 +20,14 @@
   border-radius: 8px;
 }
 
+.pinnedLinkPanelColumn {
+}
+
+.pinnedPanelsDivider {
+  width: 50%;
+  border-bottom: 1px solid black
+}
+
 @media (max-width: 450px) {
   .container {
     padding-top: 0vh;
