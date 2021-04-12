@@ -1,0 +1,84 @@
+.panelIcon {
+
+	margin-right: 10px;
+	font-size: 25px;
+	padding-top: 3px;
+	margin-top: 2px;
+	margin-bottom: -3px;
+}
+
+.panelButton {
+	width: 375px;
+	height: 50px;
+
+	margin-top: 10px;
+	border-radius: 8px;
+}
+
+.panelButton {
+	width: 375px;
+	height: 50px;
+
+	margin-top: 10px;
+	border-radius: 8px;
+}
+
+.panelButton .panelButtonContent {
+	width: 375px;
+	height: 50px;
+
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.panelButton .btnText {
+	font-size: 16px;
+}
+
+.panelButton .btnIco {
+    top: 0;
+    margin-top: auto;
+    margin-bottom: 14px;
+}
+
+.panelButtonImage {
+	max-width: 32px;
+	border-radius: 90px;
+	margin-right: 8px;
+	margin-bottom: -4px;
+}
+
+.panelDiscordWidget {
+	margin-top: 10px;
+}
+
+.panelYTVideoWidget {
+	margin-top: 10px;
+	border-radius: 10px;
+}
+
+.spotifyTrackWidget {
+	margin-top: 10px;
+	margin-bottom: -7px;
+	border-radius: 10px;
+}
+
+.panelButton a:hover  {
+	text-decoration: none;
+}
+
+@media (max-width: 400px) {
+	.panelButton { 
+		width: 325px;
+	}
+
+	.panelDiscordWidget {
+		width: 325px;
+	}
+
+	.panelYTVideoWidget {
+		width: 325px;
+	}
+}
