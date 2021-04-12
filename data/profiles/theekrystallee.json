@@ -50,7 +50,7 @@
             "label": "Uncaught Exceptions YouTube"
         },
         {
-            "type": "spotifyTrack",
+            "type": "spotify",
             "value": { 
                 "type": "episode", 
                 "id": "4x91OuTcadCUcHtCHfSr0Y"
