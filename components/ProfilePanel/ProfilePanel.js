@@ -139,7 +139,7 @@ function SpotifyTrack(props) {
 			<iframe 
 				src={link}
 				className={styles.spotifyTrackWidget}
-				width="375" height={height } 
+				width="375" height={height} 
 				frameBorder="0" 
 				allowtransparency="true" 
 				allow="encrypted-media" 

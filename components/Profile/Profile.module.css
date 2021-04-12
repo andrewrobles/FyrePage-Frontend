@@ -8,7 +8,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 5vh;
-  margin-bottom: 5vh;
+  padding-bottom: 5vh;
 }
 
 .profileColumn {
@@ -23,7 +23,7 @@
 @media (max-width: 450px) {
   .container {
     padding-top: 0vh;
-    margin-bottom: 0vh;
+    padding-bottom: 0vh;
   }
 
   .profileColumn {
