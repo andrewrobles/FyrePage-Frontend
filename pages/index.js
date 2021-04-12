@@ -1,5 +1,5 @@
-const Home = () => {  
-  return <p>Home</p>
-}
+import Landing from '../components/Landing/Landing'
 
-export default Home;
+export default function Home() {
+  return <Landing /> 
+}

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from './profile.module.css'
+import styles from './Profile.module.css'
 import ProfileBio from '../ProfileBio/ProfileBio';
 import ProfileHeader from '../ProfileHeader/ProfileHeader';
 import 'bootstrap/dist/css/bootstrap.min.css'
