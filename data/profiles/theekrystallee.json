@@ -1,0 +1,84 @@
+{
+    "name": "Krystal Lee",
+    "bio": null,
+    "background": null,
+	"header": {
+		"type": "compact",
+        "subtext": "@theekrystallee",
+		"image": "/profile/krystal.png",
+        "links": [
+            { 
+                "link": "https://www.youtube.com/channel/UCyMrIJVQ__XNA7b2mVF8G4A",
+                "icon": ["fab", "youtube"]
+            },
+            { 
+                "link": "https://tiktok.com/@theekrystallee",
+                "icon": ["fab", "tiktok"]
+            },
+            { 
+                "link": "https://www.snapchat.com/add/theekrystallee",
+                "icon": ["fab", "snapchat"]
+            },
+            { 
+                "link": "https://twitter.com/theekrystallee",
+                "icon": ["fab", "twitter"]
+            },
+            { 
+                "link": "https://instagram.com/theekrystallee",
+                "icon": ["fab", "instagram"]
+            },
+            { 
+                "link": "https://cash.app/$TechnoForLoop",
+                "icon": ["fas", "dollar-sign"]
+            },
+            { 
+                "link": "http://www.linkedin.com/in/theekrystallee",
+                "icon": ["fab", "linkedin"]
+            },
+            {
+                "link": "https://twitch.tv/krystalcodes",
+                "icon": ["fab", "twitch"]
+            }
+
+        ]
+	},
+    "panels": [
+        {
+            "type": "button",
+            "icon": ["fab", "youtube"],
+            "link": "https://www.youtube.com/channel/UCXVGYwQXZ18CdlrMsBpQFsw",
+            "label": "Uncaught Exceptions YouTube"
+        },
+        {
+            "type": "spotifyTrack",
+            "value": { 
+                "type": "episode", 
+                "id": "4x91OuTcadCUcHtCHfSr0Y"
+            }
+        },
+        {
+            "type": "https://bitclout.com/u/theekrystallee",
+            "label": "the krystallee coin"
+        },
+        {
+            "link": "https://www.gofundme.com/c/act/stop-aapi-hate",
+            "label": "#StopAsianHate GoFundMe"
+        },
+        {
+            "link": "https://linktr.ee/creativeasians",
+            "label": "Creative Asian Community"
+        },
+        {
+            "link": "https://docs.google.com/forms/d/e/1FAIpQLSdsU8QGGRQhgwcJy69jMgMobwwDsOOBCvpKnYI6kPq9MLfY9Q/viewform",
+            "label": "apply to be my simp"
+        },
+        {
+            "link": "https://discord.com/invite/wYsNTgywF2",
+            "label": "Creators of TechTok Discord"
+        },
+        {
+            "link": "https://anchor.fm/uncaughtexceptions",
+            "label": "Podcast Links"
+        }
+    ]
+}

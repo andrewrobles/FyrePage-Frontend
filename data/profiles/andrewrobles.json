@@ -1,0 +1,48 @@
+{
+    "name": "Andrew Robles",
+	"bio": null,
+	"background": null,
+	"header": {
+		"type": "compact",
+        "subtext": "@andrewrobles",
+		"image": "/profile/andrew.png",
+		"links": []
+	},
+    "panels": [
+        {
+            "type": "button",
+            "icon":  ["fab", "tiktok"],
+            "link": "https://www.tiktok.com/@andrew.robles",
+            "label": "TikTok"
+        },
+        {
+            "type": "button",
+            "icon":  ["fab", "instagram"],
+            "link": "https://www.instagram.com/andrewroblesdev/",
+            "label": "Instagram"
+        },
+        {
+            "type": "button",
+            "icon":  ["fab", "youtube"],
+            "link": "https://www.youtube.com/channel/UCqNGTj5w7NxE74m25So27gg",
+            "label": "Youtube"
+        },
+        {
+            "type": "button",
+            "icon":  ["fab", "linkedin"],
+            "link": "https://www.linkedin.com/in/andrew-robles-dev/",
+            "label": "LinkedIn"
+        },
+        {
+            "type": "button",
+            "icon":  ["fab", "github"],
+            "link": "https://github.com/andrewrobles",
+            "label": "Github"
+        },
+        {
+			"type": "youtubeVideo",
+			"value": "dQw4w9WgXcQ"
+		}
+    ]
+
+}
