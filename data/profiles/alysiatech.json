@@ -7,20 +7,16 @@
 		"subtext": "@cryptoclasses",
 		"image": "/profile/alysiatech.jpeg",
 		"links": [
-            {
-                "link": "",
-                "icon": ["far", "envelope"]
-            },
 			{
-				"link": "https://www.instagram.com/holopaino/",
+				"link": "https://www.instagram.com/alysia.tech/",
 				"icon": ["fab", "instagram"]
 			},
 			{
-				"link": "https://www.tiktok.com/@holopanio",
+				"link": "https://www.tiktok.com/@cryptoclasses",
 				"icon": ["fab", "tiktok"]
 			},
             {
-                "link": "",
+                "link": "https://www.youtube.com/channel/UCmIDPGT9SjjziPWeIN9iFrA",
                 "icon": ["fab", "youtube"]
             }
 		]
@@ -28,22 +24,21 @@
 	"panels": [
 		{
 			"type": "button",
-			"link": "https://dogehouse.tv/user/HoloPanio",
+			"link": "https://www.patreon.com/alysiatech",
 			"color": "lightgrey",
 			"label": "More for you on Patreon 🔥"
 		},
 		{
 			"type": "button",
-			"link": "https://twitch.tv/holopaino",
+			"link": "https://calendly.com/alysiatech/",
 			"label": "Crypto Calls with you 📞",
 			"bgColor": "black",
 			"color": "lightgrey"
 		},
         {
             "type": "button",
-            "link": "",
-            "label": "Buy me a tea?",
-            "color": "lightgrey"
+            "link": "https://www.coinbase.com/join/huggin_14",
+            "label": "Buy Crypto with Coinbase 💰"
         },
 		{
 			"type": "youtubeVideo",
