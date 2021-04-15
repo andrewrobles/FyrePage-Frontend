@@ -41,7 +41,11 @@
         {
 			"type": "youtubeVideo",
 			"value": "2QL1gINxQLs"
-		}
+		},
+        {
+            "type": "discord",
+            "value": "787138023791525949"
+        }
     ]
 
 }
