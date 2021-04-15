@@ -6,15 +6,26 @@
 		"type": "compact",
         "subtext": "@andrewrobles",
 		"image": "/profile/andrew.png",
-		"links": []
+		"links": [
+			{
+				"link": "https://www.instagram.com/andrewroblesdev/",
+				"icon": ["fab", "instagram"]
+			},
+			{
+				"link": "https://www.tiktok.com/@andrew.robles",
+				"icon": ["fab", "tiktok"]
+			},
+            {
+                "link": "https://www.youtube.com/channel/UCqNGTj5w7NxE74m25So27gg",
+                "icon": ["fab", "youtube"]
+            },
+            {
+                "link": "https://www.linkedin.com/in/andrew-robles-dev/",
+                "icon": ["fab", "linkedin"]
+            }
+        ]
 	},
     "panels": [
-        {
-            "type": "button",
-            "icon":  ["fab", "tiktok"],
-            "link": "https://www.tiktok.com/@andrew.robles",
-            "label": "TikTok"
-        },
         {
             "type": "button",
             "icon": ["fas", "microphone"],
@@ -28,33 +39,13 @@
             "label": "Uncaught Podcast"
         },
         {
-            "type": "button",
-            "icon":  ["fab", "instagram"],
-            "link": "https://www.instagram.com/andrewroblesdev/",
-            "label": "Instagram"
-        },
-        {
-            "type": "button",
-            "icon":  ["fab", "youtube"],
-            "link": "https://www.youtube.com/channel/UCqNGTj5w7NxE74m25So27gg",
-            "label": "Youtube"
-        },
-        {
-            "type": "button",
-            "icon":  ["fab", "linkedin"],
-            "link": "https://www.linkedin.com/in/andrew-robles-dev/",
-            "label": "LinkedIn"
-        },
-        {
-            "type": "button",
-            "icon":  ["fab", "github"],
-            "link": "https://github.com/andrewrobles",
-            "label": "Github"
-        },
-        {
 			"type": "youtubeVideo",
 			"value": "2QL1gINxQLs"
-		}
+		},
+        {
+            "type": "discord",
+            "value": "787138023791525949"
+        }
     ]
 
 }
