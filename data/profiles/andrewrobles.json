@@ -17,6 +17,18 @@
         },
         {
             "type": "button",
+            "icon": ["fas", "microphone"],
+            "link": "https://anchor.fm/andrewrobles",
+            "label": "Personal Podcast"
+        },
+        {
+            "type": "button",
+            "icon": ["fas", "code"],
+            "link": "https://anchor.fm/uncaughtexceptions",
+            "label": "Uncaught Podcast"
+        },
+        {
+            "type": "button",
             "icon":  ["fab", "instagram"],
             "link": "https://www.instagram.com/andrewroblesdev/",
             "label": "Instagram"
@@ -41,7 +53,7 @@
         },
         {
 			"type": "youtubeVideo",
-			"value": "dQw4w9WgXcQ"
+			"value": "2QL1gINxQLs"
 		}
     ]
 
