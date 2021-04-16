@@ -4,6 +4,7 @@ let data = {
     erinsantamaria: require('./profiles/erinsantamaria.json'),
     theekrystallee: require('./profiles/theekrystallee.json'),
     alysiatech: require('./profiles/alysiatech.json'),
+    dragonism: require('./profiles/dragonism.json')
 }
 
 export default data
