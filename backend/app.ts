@@ -1,7 +1,6 @@
-import { API } from './src/classes/API';
+import { Fyre } from './src/Fyre';
+const fyre = new Fyre();
 
-const api = new API();
-
-api.start(7218).then(() => {
-	console.log('API Started');
+fyre.start().then(() => {
+	console.log('FyrePage Backend Started.');
 })

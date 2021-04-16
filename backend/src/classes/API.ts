@@ -1,12 +1,18 @@
 import express, { Express } from "express";
 import { glob } from "glob";
+import { Fyre } from "../Fyre";
 import { APIResponse } from "../structures/ApiResponse";
 import { APIMethod, APIRoute } from "../util/types/APIRoute";
 
 export class API {
 	
 	private _express: Express = express();
+	private _fyre: Fyre;
 	
+	constructor(fyre: Fyre) {
+		this._fyre = fyre;
+	}
+
 	get express(): Express {
 		return this._express;
 	}
