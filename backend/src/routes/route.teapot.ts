@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { APIResponse } from '../structures/ApiResponse';
 
-export default {
+export default [{
 	route: "/teapot",
 	version: "v1",
 	method: "get",
@@ -9,9 +9,9 @@ export default {
 		const response = new APIResponse();
 
 		response.setStatus(418);
-		response.setMessage("I'm not a teapot");
+		response.setMessage("I'm a teapot");
 		response.setSuccessful();
 
 		res.status(response.status).json(response.compile());
 	}
-}
+}]

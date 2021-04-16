@@ -19,7 +19,15 @@ export class API {
 
 				files.forEach(f => {
 					const route: any = require(f).default;
+					if (route instanceof Array) {
+						route.forEach(r => {
+							const meth: APIMethod = r.method;
+							this._express[meth](`/${r.version}${r.route}`, r.execute);
+						});
+						return;
+					}
 					const method: APIMethod = route.method;
+
 
 					this._express[method](`/${route.version}${route.route}`, route.execute);
 				});
