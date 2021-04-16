@@ -41,5 +41,6 @@
   
     padding: 25px;
     border-radius: 0px;
+    min-height: 100vh;
   }
 }
