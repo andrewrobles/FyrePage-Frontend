@@ -1,0 +1,35 @@
+{
+    "name": "Joshua TechDev Walker",
+    "bio": "☁️Cloud Computing and 💾Tech Content Daily💪🏾 Buy my📘 Venti Fried Chicken👇🏾",
+    "background": null,
+	"header": {
+		"type": "compact",
+        "subtext": "@ventifriedchicken",
+		"image": "/profile/ventifriedchicken.jpeg",
+        "links": [
+            { 
+                "link": "https://www.tiktok.com/@ventifriedchicken",
+                "icon": ["fab", "tiktok"]
+            },
+            {
+                "link": "http://bit.ly/vfc-book-on-amazon",
+                "icon": ["fab", "amazon"]
+            }
+        ]
+	},
+    "panels": [
+        {
+            "type": "button",
+            "icon": ["fab", "tiktok"],
+            "link": "https://www.tiktok.com/@ventifriedchicken",
+            "label": "TikTok Tech Content"
+        },
+        {
+            "type": "button",
+            "label": "Book on Amazon",
+            "pinned": true,
+            "icon": ["fab", "amazon"],
+            "link": "https://bit.ly/vfc-book-on-amazon"
+        }
+    ]
+}
