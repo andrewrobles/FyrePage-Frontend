@@ -1,51 +1,75 @@
 {
     "name": "Andrew Robles",
-	"bio": null,
-	"background": null,
+    "bio": "Web Developer 🧑🏻‍💻 Content Creator 🎥 Follow for Tech Content 👇🏼",
+    "background": null,
 	"header": {
 		"type": "compact",
         "subtext": "@andrewrobles",
 		"image": "/profile/andrew.png",
-		"links": [
-			{
-				"link": "https://www.instagram.com/andrewroblesdev/",
-				"icon": ["fab", "instagram"]
-			},
-			{
-				"link": "https://www.tiktok.com/@andrew.robles",
-				"icon": ["fab", "tiktok"]
-			},
-            {
+        "links": [
+            { 
                 "link": "https://www.youtube.com/channel/UCqNGTj5w7NxE74m25So27gg",
                 "icon": ["fab", "youtube"]
             },
-            {
-                "link": "https://www.linkedin.com/in/andrew-robles-dev/",
+            { 
+                "link": "https://www.tiktok.com/@andrew.robles",
+                "icon": ["fab", "tiktok"]
+            },
+            { 
+                "link": "https://www.snapchat.com/add/andrewrobles12",
+                "icon": ["fab", "snapchat"]
+            },
+            { 
+                "link": "https://twitter.com/andrewroblesdev",
+                "icon": ["fab", "twitter"]
+            },
+            { 
+                "link": "https://instagram.com/andrewroblesdev",
+                "icon": ["fab", "instagram"]
+            },
+            { 
+                "link": "http://www.linkedin.com/in/andrew-robles-dev",
                 "icon": ["fab", "linkedin"]
+            },
+            {
+                "link": "https://twitch.tv/andrewroblesdev",
+                "icon": ["fab", "twitch"]
             }
+
         ]
 	},
     "panels": [
         {
             "type": "button",
-            "icon": ["fas", "microphone"],
-            "link": "https://anchor.fm/andrewrobles",
-            "label": "Personal Podcast"
+            "icon": ["fab", "youtube"],
+            "link": "https://www.youtube.com/channel/UCXVGYwQXZ18CdlrMsBpQFsw",
+            "label": "Uncaught Exceptions YouTube"
         },
         {
             "type": "button",
-            "icon": ["fas", "code"],
-            "link": "https://anchor.fm/uncaughtexceptions",
-            "label": "Uncaught Podcast"
+            "label": "The Andrew Robles Podcast",
+            "pinned": true,
+            "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXZsofV4o3jad8Oqpz4muMBT6Aa2Z7y-ugRJAuXnApgmQlmp8_oVCGORM3-dL2cSYwED4&usqp=CAU",
+            "link": "https://anchor.fm/andrewrobles"
         },
         {
-			"type": "youtubeVideo",
-			"value": "2QL1gINxQLs"
-		},
+            "type": "button",
+            "label": "Bitclout Crypto Social Network",
+            "icon": "https://pbs.twimg.com/profile_images/1380219114107457540/jmdrmXzN_400x400.jpg",
+            "link": "https://bitclout.com/u/andrewrobles"
+        },
         {
-            "type": "discord",
-            "value": "787138023791525949"
+            "type": "button",
+            "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYSJ5r4Pc8bdQsncDeA9hf5qKmByqW7WDf9A&usqp=CAU",
+            "link": "https://www.fyre.page/",
+            "label": "FyrePage Link Website Builder"
+        },
+        {
+            "type": "spotify",
+            "value": { 
+                "type": "episode", 
+                "id": "4x91OuTcadCUcHtCHfSr0Y"
+            }
         }
     ]
-
 }
