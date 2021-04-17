@@ -2,6 +2,8 @@ import { useRouter } from 'next/router'
 import Profile from '../components/Profile/Profile'
 import data from '../data/data'
 
+
+
 const User = () => {
     const router = useRouter()
     const { user } = router.query
