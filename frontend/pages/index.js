@@ -1,6 +1,5 @@
 import Landing from '../components/Landing/Landing';
-//import axios from 'axios';
 
-export default function Home() {
+export default function SignIn() {
   return <Landing /> 
 }
