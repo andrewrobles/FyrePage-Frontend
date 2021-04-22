@@ -4,12 +4,17 @@ import Button from '../Button/Button'
 import Logo from '../Logo/Logo'
 
 import { useGoogleLogin } from 'react-google-login'
+import { Router, useRouter } from 'next/router'
 
 
 const clientId = '240083179290-oahd0h3sj4hrd8o0p0i0mf2eqht2re7n.apps.googleusercontent.com'
 
 export default function Landing() {
+  const router = useRouter()
+
   const onSuccess = (res) => {
+    router.push('/home')
+
     console.log('Login Success: currentUser:', res.profileObj)
   }
 
