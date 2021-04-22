@@ -3,7 +3,28 @@ import Example from '../Example/Example'
 import Button from '../Button/Button'
 import Logo from '../Logo/Logo'
 
+import { useGoogleLogin } from 'react-google-login'
+
+
+const clientId = '240083179290-oahd0h3sj4hrd8o0p0i0mf2eqht2re7n.apps.googleusercontent.com'
+
 export default function Landing() {
+  const onSuccess = (res) => {
+    console.log('Login Success: currentUser:', res.profileObj)
+  }
+
+  const onFailure = (res) => {
+    console.log('Login failed: res:', res)
+  }
+
+  const { signIn } = useGoogleLogin({
+    onSuccess,
+    onFailure,
+    clientId,
+    isSignedIn: true,
+    acessType: 'offline',
+  })
+
   return (
       <div className="container">
         <div className="row justify-content-center">
@@ -16,7 +37,7 @@ export default function Landing() {
           <Summary />
         </div>
         <div className="row justify-content-center p-2">
-          <Button />
+          <Button onClick={ signIn }/>
         </div>
       </div>
   )
