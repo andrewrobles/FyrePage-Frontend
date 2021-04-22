@@ -4,7 +4,7 @@ import Button from '../Button/Button'
 import Logo from '../Logo/Logo'
 
 import { useGoogleLogin } from 'react-google-login'
-import { Router, useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 
 
 const clientId = '240083179290-oahd0h3sj4hrd8o0p0i0mf2eqht2re7n.apps.googleusercontent.com'
