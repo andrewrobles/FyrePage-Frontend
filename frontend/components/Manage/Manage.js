@@ -4,6 +4,9 @@ import { useGoogleLogout } from 'react-google-login'
 
 import { useRouter } from 'next/router'
 
+import ProfileHeader from '../ProfileHeader/ProfileHeader'
+import data from '../../data/data'
+
 
 const clientId = '240083179290-oahd0h3sj4hrd8o0p0i0mf2eqht2re7n.apps.googleusercontent.com'
 
@@ -24,7 +27,13 @@ export default function Manage() {
         onFailure,
     })
 
+    const userData = data['andrewrobles']
+
     return <button onClick={signOut}>
-        <span>Sign out</span>
+        <ProfileHeader
+            dat={userData.header}
+            name={userData.name}
+        />
+        <div>Sign out</div>
     </button> 
 }
