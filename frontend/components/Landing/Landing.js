@@ -13,6 +13,7 @@ export default function Landing() {
   const router = useRouter()
 
   const onSuccess = (res) => {
+    alert(res.getAuthResponse().id_token)
     router.push('/home')
 
     console.log('Login Success: currentUser:', res.profileObj)
