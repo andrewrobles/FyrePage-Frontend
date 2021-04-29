@@ -37,3 +37,6 @@ yarn-error.log*
 .vscode
 
 .next/
+backend/venv
+*.pyc
+*.sqlite3
