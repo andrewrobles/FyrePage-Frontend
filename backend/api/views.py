@@ -1,14 +1,26 @@
-from django.contrib.auth.models import User, Group
-from rest_framework import viewsets
-from rest_framework import permissions
+# Django REST framework
 from api.serializers import UserSerializer, GroupSerializer
-
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from rest_framework import permissions
+from rest_framework import viewsets
 
-@api_view()
+# Models
+from django.contrib.auth.models import User, Group
+from .models import Profile
+
+@api_view(['GET'])
 def teapot(request):
     return Response({'message': "I'm a teapot bro!"})
+
+@api_view(['POST'])
+def sign_in(request):
+    new_profile = Profile.objects.create(
+        google_id=request.data['googleId'],
+        id_token=request.data['idToken']
+    )
+
+    return Response({'message': 'hello world!'})
 
 class UserViewSet(viewsets.ModelViewSet):
     """

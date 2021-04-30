@@ -17,7 +17,7 @@ class TeapotTestCase(APITestCase):
 
 class SignInTestCase(APITestCase):
 
-    def test_new_user(self):
+    def test_new_profile(self):
         url = reverse('sign-in')
 
         request_body = {'googleId': 'my-google-id', 'idToken': 'my-id-token'}
