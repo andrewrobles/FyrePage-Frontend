@@ -11,10 +11,18 @@ from .models import Profile
 
 @api_view(['POST'])
 def sign_in(request):
-    new_profile = Profile.objects.create(
-        google_id=request.data['googleId'],
-        id_token=request.data['idToken']
+    
+    profiles_matching_google_id = Profile.objects.filter(
+        google_id=request.data['googleId']
     )
+
+    # Create profile if user is signing in for first time
+    if profiles_matching_google_id.count() == 0:
+        
+        new_profile = Profile.objects.create(
+            google_id=request.data['googleId'],
+            id_token=request.data['idToken']
+        )
 
     return Response({'message': 'hello world!'})
 
