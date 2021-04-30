@@ -20,13 +20,11 @@ class SignInTestCase(APITestCase):
         self._sign_in_user()
 
         # Verify profile exists in database with correct google id  
-        self.assertEqual(1, len(Profile.objects.filter(google_id=self.request_body['googleId'])))
-
-        # Get user with google id matching request body data
-        new_user = Profile.objects.get(google_id=self.request_body['googleId'])
+        self.assertEqual(1, len(Profile.objects.filter(google_id=self._google_id)))
 
         # Verify new user contains correct id token
-        self.assertEqual(self.request_body['idToken'], new_user.id_token)
+        new_user = Profile.objects.get(google_id=self._google_id)
+        self.assertEqual(self._id_token, new_user.id_token)
 
     def test_existing_profile(self):
         """
@@ -40,9 +38,32 @@ class SignInTestCase(APITestCase):
         # Verify there is only one profile created
         self.assertEqual(1, len(Profile.objects.all()))
 
+    def test_authenticate_user(self):
+        """
+        User should be authenticated upon signing in 
+        """
+
+        self._sign_in_user()
+
+        # Verify user is authenticated
+        user = Profile.objects.get(google_id=self._google_id).user
+        self.assertTrue(user.is_authenticated)
+
+    # Utility functions below this line ---------------------------------------
+
     def _sign_in_user(self):
         # Create API call to sign in a user
         self.client.post(self.url, self.request_body, format='json')
+
+    @property
+    def _google_id(self):
+        return self.request_body['googleId']
+
+    @property
+    def _id_token(self):
+        return self.request_body['idToken']
+
+
 
 
 
