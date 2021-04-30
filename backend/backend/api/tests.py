@@ -9,6 +9,6 @@ class TeapotTestCase(APITestCase):
         url = reverse('teapot')
 
         expected_response = {'message': "I'm a teapot bro!"}
-        actual_response = self.client.get(url)
+        actual_response = self.client.get(url).data
 
         self.assertEqual(expected_response, actual_response)
