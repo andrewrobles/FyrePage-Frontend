@@ -18,8 +18,15 @@ def sign_in(request):
 
     # Create profile if user is signing in for first time
     if profiles_matching_google_id.count() == 0:
+
+        # TODO: Make this more secure
+        new_user = User.objects.create_user(
+            username='username',
+            password='password',
+        )
         
         new_profile = Profile.objects.create(
+            user=new_user,
             google_id=request.data['googleId'],
             id_token=request.data['idToken']
         )
