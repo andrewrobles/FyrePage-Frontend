@@ -5,16 +5,6 @@ from django.urls import reverse
 
 from api.models import Profile
 
-class TeapotTestCase(APITestCase):
-
-    def test_teapot(self):
-        url = reverse('teapot')
-
-        expected_response = {'message': "I'm a teapot bro!"}
-        actual_response = self.client.get(url).data
-
-        self.assertEqual(expected_response, actual_response)
-
 class SignInTestCase(APITestCase):
 
     def test_new_profile(self):

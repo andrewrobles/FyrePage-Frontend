@@ -9,10 +9,6 @@ from rest_framework import viewsets
 from django.contrib.auth.models import User, Group
 from .models import Profile
 
-@api_view(['GET'])
-def teapot(request):
-    return Response({'message': "I'm a teapot bro!"})
-
 @api_view(['POST'])
 def sign_in(request):
     new_profile = Profile.objects.create(
