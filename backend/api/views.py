@@ -1,11 +1,9 @@
-# Django REST framework
 from api.serializers import UserSerializer, GroupSerializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import permissions
 from rest_framework import viewsets
 
-# Models
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login
 from .models import Profile
@@ -31,7 +29,7 @@ def sign_in(request):
             id_token=request.data['idToken']
         )
 
-        user = authenticate(username=new_user.username, password='password')
+        user = authenticate(new_profile.id_token)
 
         if user is not None:
             login(request, user)
