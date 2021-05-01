@@ -35,7 +35,7 @@ def sign_in(request):
 
 @api_view(['GET'])
 def profile(request):
-    data = {'detail': 'Authentication credentials not provided'}
+    data = {'detail': 'Authentication credentials were not provided.'}
     return Response(data, status=403)
 
 
