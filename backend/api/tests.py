@@ -4,6 +4,7 @@ from rest_framework.test import APITestCase
 from django.urls import reverse
 
 from api.models import Profile
+from django.contrib import auth
 
 class SignInTestCase(APITestCase):
 
@@ -46,7 +47,7 @@ class SignInTestCase(APITestCase):
         self._sign_in_user()
 
         # Verify user is authenticated
-        user = Profile.objects.get(google_id=self._google_id).user
+        user = auth.get_user(self.client) 
         self.assertTrue(user.is_authenticated)
 
     # Utility functions below this line ---------------------------------------
