@@ -3,6 +3,7 @@ from django.test import TestCase
 from rest_framework.test import APITestCase
 from django.urls import reverse
 
+from django.contrib.auth.models import User
 from api.models import Profile
 from django.contrib import auth
 
@@ -21,11 +22,13 @@ class SignInTestCase(APITestCase):
         self._sign_in_user()
 
         # Verify profile exists in database with correct google id  
-        self.assertEqual(1, len(Profile.objects.filter(google_id=self._google_id)))
+        self.assertEqual(1, len(Profile.objects.all()))
+        self.assertEqual(Profile.objects.all().first().google_id, self._google_id)
 
         # Verify new user contains correct id token
-        new_user = Profile.objects.get(google_id=self._google_id)
-        self.assertEqual(self._id_token, new_user.id_token)
+        new_user = User.objects.get(username=self._google_id)
+        new_profile = Profile.objects.get(user=new_user)
+        self.assertEqual(self._id_token, new_profile.id_token)
 
     def test_existing_profile(self):
         """
