@@ -33,6 +33,12 @@ def sign_in(request):
 
     return Response({'message': 'hello world!'})
 
+@api_view(['GET'])
+def profile(request):
+    data = {'detail': 'Authentication credentials not provided'}
+    return Response(data, status=403)
+
+
 class UserViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.

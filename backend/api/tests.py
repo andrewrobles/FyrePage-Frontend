@@ -41,7 +41,7 @@ class SignInTestCase(APITestCase):
 
     def test_get_profile_before_sign_in(self):
 
-        response = self.client.get(self.profile_url, format='json')
+        response = self.client.get(reverse('profile'), format='json')
 
         self.assertTrue({'detail': 'Authentication credentials were not provided.'}, response.data)
 
