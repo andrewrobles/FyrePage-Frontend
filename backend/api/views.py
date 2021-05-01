@@ -42,12 +42,26 @@ def sign_in(request):
 
 @api_view(['GET'])
 def profile(request):
-    data = {'detail': 'Authentication credentials were not provided.'}
     
     if request.user.is_authenticated:
-        return Response(data, status=200)
+        
+        status_code = 200
+
+        profile = Profile.objects.get(user=request.user)
+
+        response_body = {
+            'googleId': profile.google_id,
+            'idToken': profile.id_token
+        }
+
     else:
-        return Response(data, status=403)
+        status_code = 403
+
+        response_body = {
+            'detail': 'Authentication credentials were not provided.'
+        }
+        
+    return Response(response_body, status_code)
 
 
 class UserViewSet(viewsets.ModelViewSet):

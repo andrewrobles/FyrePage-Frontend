@@ -54,6 +54,7 @@ class SignInTestCase(APITestCase):
         response = self.client.get(reverse('profile'), format='json')
 
         self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data, self._request_body)
 
     # Utility functions below this line ---------------------------------------
 
