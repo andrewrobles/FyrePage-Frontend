@@ -39,16 +39,11 @@ class SignInTestCase(APITestCase):
         # Verify there is only one profile created
         self.assertEqual(1, len(Profile.objects.all()))
 
-    def test_authenticate_user(self):
-        """
-        User should be authenticated upon signing in 
-        """
+    def test_get_profile_before_sign_in(self):
 
-        self._sign_in_user()
+        response = self.client.get(self.profile_url, format='json')
 
-        # Verify user is authenticated
-        user = auth.get_user(self.client) 
-        self.assertTrue(user.is_authenticated)
+        self.assertTrue({'detail': 'Authentication credentials were not provided.'}, response.data)
 
     # Utility functions below this line ---------------------------------------
 
