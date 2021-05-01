@@ -9,8 +9,8 @@ from django.contrib import auth
 class SignInTestCase(APITestCase):
 
     def setUp(self):
-        self.url = reverse('sign-in')
-        self.request_body = {'googleId': 'my-google-id', 'idToken': 'my-id-token'}
+        self._url = reverse('sign-in')
+        self._request_body = {'googleId': 'my-google-id', 'idToken': 'my-id-token'}
 
     def test_new_profile(self):
         """
@@ -59,15 +59,15 @@ class SignInTestCase(APITestCase):
 
     def _sign_in_user(self):
         # Create API call to sign in a user
-        self.client.post(self.url, self.request_body, format='json')
+        self.client.post(self._url, self._request_body, format='json')
 
     @property
     def _google_id(self):
-        return self.request_body['googleId']
+        return self._request_body['googleId']
 
     @property
     def _id_token(self):
-        return self.request_body['idToken']
+        return self._request_body['idToken']
 
 
 
