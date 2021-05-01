@@ -7,6 +7,7 @@ from rest_framework import viewsets
 
 # Models
 from django.contrib.auth.models import User, Group
+from django.contrib.auth import authenticate, login
 from .models import Profile
 
 @api_view(['POST'])
@@ -31,12 +32,22 @@ def sign_in(request):
             id_token=request.data['idToken']
         )
 
+        user = authenticate(username='username', password='password')
+
+        if user is not None:
+            login(request, user)
+        
+
     return Response({'message': 'hello world!'})
 
 @api_view(['GET'])
 def profile(request):
     data = {'detail': 'Authentication credentials were not provided.'}
-    return Response(data, status=403)
+    
+    if request.user.is_authenticated:
+        return Response(data, status=200)
+    else:
+        return Response(data, status=403)
 
 
 class UserViewSet(viewsets.ModelViewSet):
