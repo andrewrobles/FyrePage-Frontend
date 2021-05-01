@@ -46,6 +46,14 @@ class SignInTestCase(APITestCase):
         self.assertEqual(response.status_code, 403)
 
         self.assertEqual({'detail': 'Authentication credentials were not provided.'}, response.data)
+    
+    def test_get_profile_after_sign_in(self):
+
+        self._sign_in_user()
+
+        response = self.client.get(reverse('profile'), format='json')
+
+        self.assertEqual(response.status_code, 200)
 
     # Utility functions below this line ---------------------------------------
 
