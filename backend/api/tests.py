@@ -73,7 +73,7 @@ class SignInTestCase(APITestCase):
         return self.client.post(self._sign_in_url, self._request_body, format='json')
 
     def _sign_out_user(self):
-        return self.client.post(self._sign_out_url, self._request_body, format='json')
+        return self.client.post(self._sign_out_url, format='json')
 
     def _get_profile_data(self):
         return self.client.get(reverse('profile'), format='json')

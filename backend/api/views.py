@@ -5,7 +5,7 @@ from rest_framework import permissions
 from rest_framework import viewsets
 
 from django.contrib.auth.models import User, Group
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from .models import Profile
 
 @api_view(['POST'])
@@ -36,6 +36,11 @@ def sign_in(request):
         
 
     return Response({'message': 'hello world!'})
+
+@api_view(['POST'])
+def sign_out(request):
+    pass
+
 
 @api_view(['GET'])
 def profile(request):
