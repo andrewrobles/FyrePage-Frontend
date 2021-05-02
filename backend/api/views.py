@@ -35,11 +35,13 @@ def sign_in(request):
             login(request, user)
         
 
-    return Response({'message': 'hello world!'})
+    return Response()
 
 @api_view(['POST'])
 def sign_out(request):
-    pass
+    logout(request)
+
+    return Response() 
 
 
 @api_view(['GET'])
