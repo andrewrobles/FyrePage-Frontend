@@ -10,29 +10,14 @@ from .models import Profile
 
 @api_view(['POST'])
 def sign_in(request):
-    
-    users_matching_google_id = User.objects.filter(
-        username=request.data['googleId']
+
+    user = authenticate(
+        google_id=request.data['googleId'],
+        id_token=request.data['idToken']
     )
 
-    # Create profile if user is signing in for first time
-    if users_matching_google_id.count() == 0:
-
-        # TODO: Make this more secure
-        new_user = User.objects.create_user(
-            username=request.data['googleId'],
-            password='password',
-        )
-
-        new_profile = Profile.objects.create(
-            user=new_user,
-            id_token=request.data['idToken']
-        )
-
-        user = authenticate(new_profile.id_token)
-
-        if user is not None:
-            login(request, user)
+    if user is not None:
+        login(request, user)
         
 
     return Response()
