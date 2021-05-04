@@ -13,7 +13,15 @@ export default function Landing() {
   const router = useRouter()
 
   const onSuccess = (res) => {
-    alert(res.getAuthResponse().id_token)
+    const url = 'http://localhost:8000/v1/sign-in/'
+    const googleId = 'my-google-id'
+    const idToken = 'my-id-token'
+
+    signInUser(url, googleId, idToken).then(response=>{
+      console.log(response)
+    })
+
+    console.log(res.getAuthResponse().id_token)
     router.push('/home')
 
     console.log('Login Success: currentUser:', res.profileObj)
@@ -47,4 +55,22 @@ export default function Landing() {
         </div>
       </div>
   )
+}
+
+async function signInUser(url, googleId, idToken) {
+  const response = await fetch(url, {
+    method: 'POST',
+    mode: 'cors',
+    cache: 'no-cache',
+    credentials: 'same-origin',
+    headers: {
+      "Access-Control-Allow-Origin":  "*",
+      "Access-Control-Allow-Methods": "POST",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization"
+    },
+    body: {
+      googleId: googleId,
+      idToken: idToken
+    } 
+  })
 }
