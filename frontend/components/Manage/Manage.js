@@ -31,7 +31,9 @@ export default function Manage() {
 
     const url = 'https://jsonplaceholder.typicode.com/users'
 
-    fetchData(url)
+    fetchData(url).then(response=>{
+        console.log(response)
+    })
 
     return <button onClick={signOut}>
         <ProfileHeader
@@ -42,11 +44,8 @@ export default function Manage() {
     </button> 
 }
 
-const fetchData = (url) => {
-    fetch(url)
-    .then(response=>{
-        return response.json()
-    }).then(json=>{
-        console.log(json)
-    })
+async function fetchData(url) {
+    const response = await fetch(url)
+    const data = await response.json()
+    return data
 }
