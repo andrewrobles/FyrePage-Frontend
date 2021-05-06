@@ -60,13 +60,8 @@ export default function Landing() {
 async function signInUser(url, googleId, idToken) {
   const response = await fetch(url, {
     method: 'POST',
-    mode: 'cors',
-    cache: 'no-cache',
-    credentials: 'same-origin',
     headers: {
-      "Access-Control-Allow-Origin":  "*",
-      "Access-Control-Allow-Methods": "POST",
-      "Access-Control-Allow-Headers": "Content-Type, Authorization"
+      'Content-Type': 'application/json'
     },
     body: {
       googleId: googleId,

@@ -29,7 +29,7 @@ export default function Manage() {
 
     const userData = data['andrewrobles']
 
-    const url = 'https://localhost:3000/v1/profile'
+    const url = 'http://localhost:8000/v1/profile'
 
     fetchData(url).then(data=>{
 

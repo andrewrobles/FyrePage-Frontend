@@ -132,5 +132,6 @@ REST_FRAMEWORK = {
 }
 
 AUTHENTICATION_BACKENDS = [
-    'api.auth.GoogleAuthBackend'
+    'api.auth.GoogleAuthBackend',
+    'django.contrib.auth.backends.ModelBackend',
 ]
