@@ -20,7 +20,6 @@ export default function Landing() {
 
     signInUser(url, googleId, idToken).then(response=>{
       console.log(response)
-      alert(response)
       router.push('/home')
 
       console.log('Login Success: currentUser:', res.profileObj)
@@ -59,7 +58,6 @@ export default function Landing() {
 }
 
 async function signInUser(url, googleId, idToken) {
-  alert('hello')
   const response = await fetch(url, {
     method: 'POST',
     headers: {
