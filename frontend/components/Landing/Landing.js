@@ -15,23 +15,17 @@ export default function Landing() {
 
   const onSuccess = (res) => {
     const url = 'http://localhost:8000/v1/sign-in/'
-    const googleId = 'my-google-id'
+    const googleId = 'my-gooogle-id'
     const idToken = 'my-id-token'
-
-    const { data, error } = useFetch(url, {
-      headers: { accept: "application/json" },
-    })
-
-    console.log(`Sign in attempt: ${data}`)
 
     signInUser(url, googleId, idToken).then(response=>{
       console.log(response)
+      alert(response)
+      router.push('/home')
+
+      console.log('Login Success: currentUser:', res.profileObj)
     })
 
-    console.log(res.getAuthResponse().id_token)
-    router.push('/home')
-
-    console.log('Login Success: currentUser:', res.profileObj)
   }
 
   const onFailure = (res) => {
@@ -65,9 +59,11 @@ export default function Landing() {
 }
 
 async function signInUser(url, googleId, idToken) {
+  alert('hello')
   const response = await fetch(url, {
     method: 'POST',
     headers: {
+      'Accept': 'application/json, text/plain, */*',
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
