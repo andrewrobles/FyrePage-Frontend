@@ -6,12 +6,21 @@ import Logo from '../Logo/Logo'
 import { useGoogleLogin } from 'react-google-login'
 import { useRouter } from 'next/router'
 
-import { useFetch } from 'react-async'
+import Cookies from 'universal-cookie'
 
 const clientId = '240083179290-oahd0h3sj4hrd8o0p0i0mf2eqht2re7n.apps.googleusercontent.com'
 
 export default function Landing() {
   const router = useRouter()
+
+
+  const cookies = new Cookies()
+
+  cookies.set('SameSite', 'none')
+  cookies.set('Secure', true)
+
+  console.log('SameSite')
+  console.log(cookies.get('SameSite'))
 
   const onSuccess = (res) => {
     const url = 'http://localhost:8000/v1/sign-in/'
@@ -58,15 +67,33 @@ export default function Landing() {
 }
 
 async function signInUser(url, googleId, idToken) {
+  const csrftoken = getCookie('csrftoken')
   const response = await fetch(url, {
     method: 'POST',
     headers: {
       'Accept': 'application/json, text/plain, */*',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'X-CSRFToken': csrftoken,
     },
     body: JSON.stringify({
       googleId: googleId,
       idToken: idToken
     })
   })
+}
+
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
 }
