@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders',
     'rest_framework',
     'api.apps.ApiConfig',
     'django.contrib.admin',
@@ -49,6 +50,17 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+'corsheaders.middleware.CorsMiddleware',  
+    'django.middleware.common.CommonMiddleware', 
+]
+
+CORS_ORIGIN_ALLOW_ALL = True # If this is used then `CORS_ORIGIN_WHITELIST` will not have any effect
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+] # If this is used, then not need to use `CORS_ORIGIN_ALLOW_ALL = True`
+CORS_ORIGIN_REGEX_WHITELIST = [
+    'http://localhost:3000',
 ]
 
 ROOT_URLCONF = 'backend.urls'

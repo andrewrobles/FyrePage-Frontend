@@ -20,7 +20,7 @@ def sign_in(request):
         login(request, user)
         
 
-    return Response()
+    return Response(headers={'Control-Allow-Headers': 'X-CSRF-Token, Content-Type'})
 
 @api_view(['POST'])
 def sign_out(request):
