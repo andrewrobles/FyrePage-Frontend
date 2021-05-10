@@ -5,16 +5,27 @@ from rest_framework.test import APITestCase
 class AuthTestCase(APITestCase):
 
     def test_sign_up(self):
-        expected_username = 'fyre'
+        username = 'fyre'
+        password = '4321'
 
         response = self.client.post(
-            'http://localhost:8000/core/users/'
-            , {
-                'username': expected_username,
-                'password': '4321'
+            'http://localhost:8000/core/users/', 
+            {
+                'username': username,
+                'password': password
             }
         )
 
-        actual_username = response.data['username']
+        self.assertEqual(response.data['username'], username)
 
-        self.assertEqual(expected_username, actual_username)
+        self.client.credentials(HTTP_AUTHORIZATION='JWT {}'.format(response.data['token']))
+
+        response = self.client.get(
+            'http://localhost:8000/core/current_user/',
+            headers = {
+                'Authorization': 'JWT {}'.format(response.data['token'])
+            }
+        )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data['username'], username)
