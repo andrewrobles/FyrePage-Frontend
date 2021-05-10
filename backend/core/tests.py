@@ -8,7 +8,7 @@ class AuthTestCase(APITestCase):
         self.username = 'fyre'
         self.password = '4321'
 
-        self.sign_up_response = self.client.post(
+        self.response = self.client.post(
             'http://localhost:8000/core/users/', 
             {
                 'username': self.username,
@@ -16,17 +16,32 @@ class AuthTestCase(APITestCase):
             }
         )
 
-        self.token = self.sign_up_response.data['token']
+        self.token = self.response.data['token']
 
     def test_sign_up(self):
-        self.assertEqual(self.sign_up_response.status_code, 201)
-        self.assertEqual(self.sign_up_response.data['username'], self.username)
-        self.assertTrue('token' in self.sign_up_response.data)
+        self.assertEqual(self.response.status_code, 201)
+        self.assertEqual(self.response.data['username'], self.username)
+        self.assertTrue('token' in self.response.data)
 
-
-    def test_sign_in(self):
+    def test_current_user(self):
         self.client.credentials(HTTP_AUTHORIZATION='JWT {}'.format(self.token))
         response = self.client.get('http://localhost:8000/core/current_user/')
 
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.data['username'], self.username)
+
+    def test_log_in(self):
+        response = self.client.post(
+            'http://localhost:8000/token-auth/',
+            {
+                'username': self.username,
+                'password': self.password
+            }
+        )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data['user'], {'username': self.username})
+        self.assertTrue('token' in response.data)
+
+
+        
