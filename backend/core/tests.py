@@ -23,12 +23,18 @@ class AuthTestCase(APITestCase):
         self.assertEqual(self.response.data['username'], self.username)
         self.assertTrue('token' in self.response.data)
 
-    def test_current_user(self):
+    def test_current_user_while_signed_in(self):
         self.client.credentials(HTTP_AUTHORIZATION='JWT {}'.format(self.token))
         response = self.client.get('http://localhost:8000/core/current_user/')
 
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.data['username'], self.username)
+    
+    def test_current_user_not_signed_in(self):
+        response = self.client.get('http://localhost:8000/core/current_user/')
+
+        self.assertEqual(response.status_code, 401)
+        self.assertTrue('detail' in response.data)
 
     def test_log_in(self):
         response = self.client.post(
