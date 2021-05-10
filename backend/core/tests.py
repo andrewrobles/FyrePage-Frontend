@@ -20,12 +20,7 @@ class AuthTestCase(APITestCase):
 
         self.client.credentials(HTTP_AUTHORIZATION='JWT {}'.format(response.data['token']))
 
-        response = self.client.get(
-            'http://localhost:8000/core/current_user/',
-            headers = {
-                'Authorization': 'JWT {}'.format(response.data['token'])
-            }
-        )
+        response = self.client.get('http://localhost:8000/core/current_user/')
 
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.data['username'], username)
