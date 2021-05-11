@@ -16,7 +16,7 @@ class App extends Component {
 
   componentDidMount() {
     if (this.state.logged_in) {
-      fetch('http://andrewrobles.pythonanywhere.com//core/current_user/', {
+      fetch('https://andrewrobles.pythonanywhere.com//core/current_user/', {
         headers: {
           Authorization: `JWT ${localStorage.getItem('token')}`
         }
@@ -30,7 +30,7 @@ class App extends Component {
 
   handle_login = (e, data) => {
     e.preventDefault();
-    fetch('http://andrewrobles.pythonanywhere.com//token-auth/', {
+    fetch('https://andrewrobles.pythonanywhere.com//token-auth/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -55,7 +55,7 @@ class App extends Component {
 
   handle_signup = (e, data) => {
     e.preventDefault();
-    fetch('http://andrewrobles.pythonanywhere.com//core/users/', {
+    fetch('https://andrewrobles.pythonanywhere.com//core/users/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
