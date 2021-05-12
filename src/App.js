@@ -151,7 +151,7 @@ class App extends Component {
           }
           {
             this.state.logged_in && this.state.links && this.state.links.length > 0
-            ? this.state.links.map(currLink => <ManageLinkForm 
+            ? this.state.links.map(currLink => <LinkForm 
               text={currLink.text}
               url={currLink.url}
               handle_submit={() => {alert('hello world')}}
