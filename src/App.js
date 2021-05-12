@@ -4,6 +4,7 @@ import LoginForm from './components/LoginForm';
 import SignupForm from './components/SignupForm';
 import LinkForm from './components/LinkForm';
 import './App.css';
+import ManageLinkForm from './components/ManageLinkForm';
 
 const base_url = 'http://localhost:8000'
 
@@ -145,12 +146,16 @@ class App extends Component {
         </h3>
         <div>
           {this.state.logged_in
-            ? <LinkForm handle_add_link={this.handle_add_link}/>
+            ? <LinkForm handle_submit={this.handle_add_link}/>
             : <span/>
           }
           {
             this.state.logged_in && this.state.links && this.state.links.length > 0
-            ? this.state.links.map(currLink => <div><button>{currLink.text}</button></div>) 
+            ? this.state.links.map(currLink => <ManageLinkForm 
+              text={currLink.text}
+              url={currLink.url}
+              handle_submit={() => {alert('hello world')}}
+            />) 
             : <span/>
           }
         </div>

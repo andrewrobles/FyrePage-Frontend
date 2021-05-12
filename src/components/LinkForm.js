@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 class LinkForm extends React.Component {
   state = {
-    text: '',
-    url: ''
+    text: this.props.text,
+    url: this.props.url
   };
 
   handle_change = e => {
@@ -19,7 +19,7 @@ class LinkForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={e => this.props.handle_add_link(e, this.state)}>
+      <form onSubmit={e => this.props.handle_submit(e, this.state)}>
         <h4>Add link</h4>
         <label htmlFor="text">Text</label>
         <input
@@ -44,5 +44,7 @@ class LinkForm extends React.Component {
 export default LinkForm;
 
 LinkForm.propTypes = {
-  handle_add_link: PropTypes.func.isRequired
+  handle_submit: PropTypes.func.isRequired,
+  text: '',
+  url: ''
 };
