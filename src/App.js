@@ -13,7 +13,8 @@ class App extends Component {
     this.state = {
       displayed_form: '',
       logged_in: localStorage.getItem('token') ? true : false,
-      username: ''
+      username: '',
+      links: [],
     };
   }
 
@@ -28,8 +29,19 @@ class App extends Component {
         .then(json => {
           this.setState({ username: json.username });
         });
+      
+        fetch(base_url + '/core/links/', {
+        headers: {
+          Authorization: `JWT ${localStorage.getItem('token')}`
+        }
+      })
+        .then(res => res.json())
+        .then(json => {
+          this.setState({ links: json.links });
+        });
     }
   }
+
 
   handle_login = (e, data) => {
     e.preventDefault();
@@ -67,6 +79,16 @@ class App extends Component {
       },
       body: JSON.stringify(data)
     })
+
+            fetch(base_url + '/core/links/', {
+        headers: {
+          Authorization: `JWT ${localStorage.getItem('token')}`
+        }
+      })
+        .then(res => res.json())
+        .then(json => {
+          this.setState({ links: json.links });
+        });
   };
 
   handle_signup = (e, data) => {
@@ -124,6 +146,11 @@ class App extends Component {
         <div>
           {this.state.logged_in
             ? <LinkForm handle_add_link={this.handle_add_link}/>
+            : <span/>
+          }
+          {
+            this.state.logged_in && this.state.links && this.state.links.length > 0
+            ? this.state.links.map(currLink => <div><button>{currLink.text}</button></div>) 
             : <span/>
           }
         </div>
