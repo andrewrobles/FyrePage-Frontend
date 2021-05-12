@@ -4,7 +4,7 @@ import LoginForm from './components/LoginForm';
 import SignupForm from './components/SignupForm';
 import './App.css';
 
-const base_url = 'http://localhost:8000'
+const base_url = 'https://andrewrobles.pythonanywhere.com'
 
 class App extends Component {
   constructor(props) {
