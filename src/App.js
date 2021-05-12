@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Nav from './components/Nav';
 import LoginForm from './components/LoginForm';
 import SignupForm from './components/SignupForm';
+import LinkForm from './components/LinkForm';
 import './App.css';
 
 const base_url = 'http://localhost:8000'
@@ -54,6 +55,18 @@ class App extends Component {
   handle_logout = () => {
     localStorage.removeItem('token');
     this.setState({ logged_in: false, username: '' });
+  };
+  
+  handle_add_link = (e, data) => {
+    e.preventDefault();
+    fetch(base_url + '/core/links/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+         Authorization: `JWT ${localStorage.getItem('token')}`
+      },
+      body: JSON.stringify(data)
+    })
   };
 
   handle_signup = (e, data) => {
@@ -108,6 +121,12 @@ class App extends Component {
             ? `Hello, ${this.state.username}`
             : 'Please Log In'}
         </h3>
+        <div>
+          {this.state.logged_in
+            ? <LinkForm handle_add_link={this.handle_add_link}/>
+            : <span/>
+          }
+        </div>
       </div>
     );
   }
