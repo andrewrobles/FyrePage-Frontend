@@ -4,6 +4,8 @@ import LoginForm from './components/LoginForm';
 import SignupForm from './components/SignupForm';
 import './App.css';
 
+const base_url = 'http://localhost:8000'
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -16,7 +18,7 @@ class App extends Component {
 
   componentDidMount() {
     if (this.state.logged_in) {
-      fetch('https://andrewrobles.pythonanywhere.com//core/current_user/', {
+      fetch(base_url + '/core/current_user/', {
         headers: {
           Authorization: `JWT ${localStorage.getItem('token')}`
         }
@@ -30,10 +32,11 @@ class App extends Component {
 
   handle_login = (e, data) => {
     e.preventDefault();
-    fetch('https://andrewrobles.pythonanywhere.com//token-auth/', {
+    fetch(base_url + '/token-auth/', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Origin': 'http://localhost:3000'
       },
       body: JSON.stringify(data)
     })
@@ -55,10 +58,10 @@ class App extends Component {
 
   handle_signup = (e, data) => {
     e.preventDefault();
-    fetch('https://andrewrobles.pythonanywhere.com//core/users/', {
+    fetch(base_url + '/core/users/', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(data)
     })
